@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--------- CSS BOOTSTRAP ---------->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        <!--------- CSS PERSONALIZADOS ------->
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="../../libs/splide/dist/css/splide.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+        <title>Modulo Médicos Administrador</title>
+    
+        <style>
+            
+        </style>
+        
+    </head>
+<body>
+    <div class="container-fluid">
+        <div class="row flex-nowrap">
+            <!--Sidebar-->
+            <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg-white">
+                <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 min-vh-100">
+                    <a href="#" class="mt-3 d-flex align-items-center pb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+                        <span style="color: gray; font-size: small;" class="d-none d-sm-inline">Herramientas</span>
+                    </a>
+                    <ul style="width: 100% !important;" class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start" id="menu">
+                        <li  class="clase_li pb-1 pt-1 nav-item">
+                            <a href="dashboard.html" class="modulos nav-link align-middle px-0">
+                                <i class="fs-4 bi-house"></i> <span class="ms-1 d-none d-sm-inline">Dashboard</span>
+                            </a>
+                        </li>
+                        <li class="clase_li pb-1 pt-1 nav-item">
+                            <a  class="modulos nav-link align-middle px-0">
+                                <i class="fs-4 bi-credit-card"></i> <span class="ms-1 d-none d-sm-inline">Punto de Venta</span>
+                            </a>
+                        </li>
+                        <li class="clase_li pb-1 pt-1 nav-item">
+                            <a href="pacientes.html" class="modulos nav-link align-middle px-0">
+                                <i class="fs-4 bi-person"></i> <span class="ms-1 d-none d-sm-inline">Pacientes</span>
+                            </a>
+                        </li>
+                        <li class="clase_li pb-1 pt-1 nav-item">
+                            <a  class="modulos nav-link align-middle px-0">
+                                <i class="fs-4 bi-clipboard2"></i> <span class="ms-1 d-none d-sm-inline">Inventario</span>
+                            </a>
+                        </li>
+                        <li class="clase_li pb-1 pt-1 nav-item">
+                            <a href="medicos.html" class="clase_a modulos nav-link align-middle px-0">
+                                <i class="fa-solid fa-user-doctor fa-lg"></i> <span class="ms-1 d-none d-sm-inline">Médicos</span>
+                            </a>
+                        </li>
+                        <li class="clase_li pb-1 pt-1 nav-item">
+                            <a href="proveedores.html" class="modulos nav-link align-middle px-0">
+                                <i class="bi bi-capsule"></i> <span class="ms-1 d-none d-sm-inline">Proveedores</span>
+                            </a>
+                        </li>
+                        <li class="clase_li pb-1 pt-1 nav-item">
+                            <a href="sucursales.html" class="modulos nav-link align-middle px-0">
+                                <i class="fs-4 bi-building"></i> <span class="ms-1 d-none d-sm-inline">Sucursales</span>
+                            </a>
+                        </li>
+                        <li class="clase_li pb-1 pt-1 nav-item">
+                            <a href="usuarios.html" class="modulos nav-link align-middle px-0">
+                                <i class="bi bi-people-fill"></i> <span class="ms-1 d-none d-sm-inline">Usuarios</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <hr>
+                </div>
+            </div>
+
+            <div class="col py-3" style="background-color: whitesmoke;" >
+                <section>
+                    <header>
+                        <nav  class="navbar navbar-expand-lg navbar-light bg-transparent pt-3 pb-3">
+                            <div class="container-fluid d-flex align-items-center">
+                              <div class="container p-0 m-0" style="width: auto !important;">
+                                <h2 class="mb-0 pb-0" style="font-weight: 600;">Médicos</h2>
+                              <p class="pt-0 mt-0" style="font-size: small; color: gray">Modulo de Médicos</p>
+                              </div>
+        
+                              <button class="navbar-toggler border-0 p-0" style="margin-top: -1rem;" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                                <i class='bx bx-menu' style="font-size: 30px;"></i>
+                              </button>
+                              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                                <ul class="navbar-nav ms-auto m-0">
+                                  <li class="nav-item m-0">
+                                    <!-- <a class="nav-link active pe-3 ps-3 m-0" style="color: white;background-color: #1C1F23; border-radius: 15px; font-size: small; margin-top: -0.1rem;" aria-current="page" href="#"> <i class="bi bi-box-arrow-in-right me-2"></i>Cerrar sesión</a> -->
+                                    <div class="dropdown pb-4 d-flex align-items-center" style="width: 100%; padding-left: 11px;">
+        
+                                        <a href="#" class="text-white text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false" style="width: 100% !important;" >
+                                            <img src="../../img/logo/logo_mini.png" alt="hugenerd" width="30" height="30" class="rounded-circle" style="border: 1px solid rgba(128, 128, 128, 0.542)">
+                                            <span class="d-sm-inline mx-2 text-black d-flex align-items-center">ProcelTI <i class="bi bi-caret-down-fill ms-2" style="vertical-align: middle;"></i></span>
+                                        </a>
+                                      
+                                        <ul class="dropdown-menu dropdown-menu-dark text-small shadow-sm border-0 m-0" style="border-radius: 20px; width: 100%; background-color: #1C1F23;" aria-labelledby="dropdownUser1">
+                                            <li><a class="dropdown-item pt-2 pb-2" href="#"><i class="bi bi-gear me-2"></i>Configuración</a></li>
+                                            <li><a class="dropdown-item pt-2 pb-2" href="#"><i class="bi bi-person-gear me-2"></i>Mi cuenta</a></li>
+                                            <li><a class="dropdown-item pt-2 pb-2" href="#"><i class="bi bi-box-arrow-in-right me-2"></i>Cerrar sesión</a></li>
+                                        </ul>
+                    
+                                    </div>
+                                  </li>
+                                  
+                                </ul>
+                              </div>
+                            </div>
+                        </nav>
+                    </header>
+
+                    <!--Contenido de la tabla de medicos-->
+                    <div class="container-fluid">
+                        <div class="row" id="fila-cards">
+                            <!-- Columna de la tabla Tabla de medicos-->
+                            <div class="col-12">
+                                <!--Tabla de los medicos -->
+                                <div class="row text-center">
+                                    <div class="col-12">
+                                        <div class="card shadow-sm border-0" style="border-radius: 17px; height: 100%;">
+                                            <div class="card-body">
+                                                <div class="row">
+                                                    <div class="row mt-4">
+                                                        <div class=" justify-content-start col-6">
+                                                            <label style="font-size: large; " class="fw-bold d-flex justify-content-start" for="citas">LISTA DE MEDICOS</label>
+                                                            <label style="font-size: small;" class="d-flex justify-content-start " for="citas">Información de Médicos</label>
+                                                        </div>
+                                                        <div class="d-flex justify-content-end col-6">
+                                                            <button style="height: 45px; color: white; border-radius: 10px;" class="btn btn-dark btn-sm btn-success pt-2 pb-2 ps-3 pe-3 me-2">Agregar médico</button>
+                                                            <button style="height: 45px; color: white; border-radius: 10px; background-color: green; border-color: green;"  class="btn btn-sm btn-success pt-2 pb-2 ps-3 pe-3 me-2">
+                                                                <i style="font-size: 18px;" class="bi-file-earmark-excel text-white"></i>
+                                                            </button>
+                                                            <button style="height: 45px; color: white; border-radius: 10px; background-color: red; border-color: red;"  class="btn btn-sm btn-success pt-2 pb-2 ps-3 pe-3 me-2">
+                                                                <i style="font-size: 18px;" class="bi-filetype-pdf"></i>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="row mt-2 mb-2">
+                                                        <div class="col-4">
+                                                            <input type="text" style="border: 0.5px solid rgba(139, 138, 138, 0.301); font-size: small; height: 45px; border-radius: 10px; width: 100%;" class="form-control" placeholder="Buscar">
+                                                        </div>
+                                                    </div>
+                                                            
+                                                        
+                                                    
+
+                                                    <div class="col-12">
+                                                        <div class="table-responsive">
+                                                            <table class="table mt-2 table-borderless">
+                                                                <thead style="background-color: rgb(250, 249, 249);" class="bg-gray" >
+                                                                  <tr style="border-bottom: 0.4px solid rgba(128, 128, 128, 0.247); color: rgb(114, 114, 114);">
+                                                                    <th scope="col">Nombre</th>
+                                                                    <th scope="col">Apellido Paterno</th>
+                                                                    <th scope="col">Apellido Materno</th>
+                                                                    <th scope="col">Sexo</th>
+                                                                    <th scope="col">Especialidad</th>
+                                                                    <th scope="col">Teléfono</th>
+                                                                    <th scope="col">Correo Electrónico</th>
+                                                                    <th scope="col">Fecha de Registro</th>
+                                                                    <th scope="col">Acciones</th>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr style="border-bottom: 0.4px solid rgba(128, 128, 128, 0.247);" class="">
+                                                                        <td style="vertical-align: middle;">Carlos</td>
+                                                                        <td style="vertical-align: middle;" >Valdes</td>
+                                                                        <td style="vertical-align: middle;">Vera</td>
+                                                                        <td style="vertical-align: middle;">Masculino</td>
+                                                                        <td style="vertical-align: middle;">Traumatología</td>
+                                                                        <td style="vertical-align: middle;">4471103453</td>
+                                                                        <td style="vertical-align: middle;">carlos_valdes@gmail.com</td>
+                                                                        <td style="vertical-align: middle;">29-03-2023</td>
+                                                                        <td style="vertical-align: middle;"><button style="border-radius: 14px;" class="btn btn-warning "><i class="bi-pencil text-white"></i></button> <button style="border-radius: 14px;" class="btn btn-danger ms-2 "><i class="bi-x-circle text-white"></i></button></td>
+                                                                    </tr>
+                                                                    <tr style="border-bottom: 0.4px solid rgba(128, 128, 128, 0.247);" class="">
+                                                                        <td style="vertical-align: middle;">Carlos</td>
+                                                                        <td style="vertical-align: middle;" >Flores</td>
+                                                                        <td style="vertical-align: middle;">Cruz</td>
+                                                                        <td style="vertical-align: middle;">Masculino</td>
+                                                                        <td style="vertical-align: middle;">Ginecologo</td>
+                                                                        <td style="vertical-align: middle;">4471103453</td>
+                                                                        <td style="vertical-align: middle;">carlos_flores@gmail.com</td>
+                                                                        <td style="vertical-align: middle;">29-01-2021</td>
+                                                                        <td style="vertical-align: middle;"><button style="border-radius: 14px;" class="btn btn-warning "><i class="bi-pencil text-white"></i></button> <button style="border-radius: 14px;" class="btn btn-danger ms-2 "><i class="bi-x-circle text-white"></i></button></td>
+                                                                    </tr>
+                                                                    <tr style="border-bottom: 0.4px solid rgba(128, 128, 128, 0.247);" class="">
+                                                                        <td style="vertical-align: middle;">Diego</td>
+                                                                        <td style="vertical-align: middle;" >Morales</td>
+                                                                        <td style="vertical-align: middle;">Garduño</td>
+                                                                        <td style="vertical-align: middle;">Masculino</td>
+                                                                        <td style="vertical-align: middle;">Anesteciologo</td>
+                                                                        <td style="vertical-align: middle;">4471103453</td>
+                                                                        <td style="vertical-align: middle;">diego_morales@gmail.com</td>
+                                                                        <td style="vertical-align: middle;">26-05-2020</td>
+                                                                        <td style="vertical-align: middle;"><button style="border-radius: 14px;" class="btn btn-warning "><i class="bi-pencil text-white"></i></button> <button style="border-radius: 14px;" class="btn btn-danger ms-2 "><i class="bi-x-circle text-white"></i></button></td>
+                                                                    </tr>
+                                                                    <tr style="border-bottom: 0.4px solid rgba(128, 128, 128, 0.247);" class="">
+                                                                        <td style="vertical-align: middle;">Diana</td>
+                                                                        <td style="vertical-align: middle;" >Juarez</td>
+                                                                        <td style="vertical-align: middle;">Perez</td>
+                                                                        <td style="vertical-align: middle;">Femenino</td>
+                                                                        <td style="vertical-align: middle;">Anesteciologo</td>
+                                                                        <td style="vertical-align: middle;">4471103453</td>
+                                                                        <td style="vertical-align: middle;">diana_juarez@gmail.com</td>
+                                                                        <td style="vertical-align: middle;">21-01-2023</td>
+                                                                        <td style="vertical-align: middle;"><button style="border-radius: 14px;" class="btn btn-warning "><i class="bi-pencil text-white"></i></button> <button style="border-radius: 14px;" class="btn btn-danger ms-2 "><i class="bi-x-circle text-white"></i></button></td>
+                                                                    </tr>
+                                                                    <tr style="border-bottom: 0.4px solid rgba(128, 128, 128, 0.247);" class="">
+                                                                        <td style="vertical-align: middle;">Juana</td>
+                                                                        <td style="vertical-align: middle;" >Martinez</td>
+                                                                        <td style="vertical-align: middle;">Suarez</td>
+                                                                        <td style="vertical-align: middle;">Femenino</td>
+                                                                        <td style="vertical-align: middle;">Cardiologia</td>
+                                                                        <td style="vertical-align: middle;">4471103453</td>
+                                                                        <td style="vertical-align: middle;">juana_martinez@gmail.com</td>
+                                                                        <td style="vertical-align: middle;">22-04-2019</td>
+                                                                        <td style="vertical-align: middle;"><button style="border-radius: 14px;" class="btn btn-warning "><i class="bi-pencil text-white"></i></button> <button style="border-radius: 14px;" class="btn btn-danger ms-2 "><i class="bi-x-circle text-white"></i></button></td>
+                                                                    </tr>
+                                                                    <tr class="">
+                                                                        <td style="vertical-align: middle;">Carlos</td>
+                                                                        <td style="vertical-align: middle;" >Valdes</td>
+                                                                        <td style="vertical-align: middle;">Vera</td>
+                                                                        <td style="vertical-align: middle;">Masculino</td>
+                                                                        <td style="vertical-align: middle;">Traumatología</td>
+                                                                        <td style="vertical-align: middle;">4471103453</td>
+                                                                        <td style="vertical-align: middle;">carlos_valdes@gmail.com</td>
+                                                                        <td style="vertical-align: middle;">29-03-2023</td>
+                                                                        <td style="vertical-align: middle;"><button style="border-radius: 14px;" class="btn btn-warning "><i class="bi-pencil text-white"></i></button> <button style="border-radius: 14px;" class="btn btn-danger ms-2 "><i class="bi-x-circle text-white"></i></button></td>
+                                                                    </tr>
+                                                                    <tr style="border-bottom: 0.4px solid rgba(128, 128, 128, 0.247);" class="">
+                                                                        <td style="vertical-align: middle;">Carlos</td>
+                                                                        <td style="vertical-align: middle;" >Flores</td>
+                                                                        <td style="vertical-align: middle;">Cruz</td>
+                                                                        <td style="vertical-align: middle;">Masculino</td>
+                                                                        <td style="vertical-align: middle;">Ginecologo</td>
+                                                                        <td style="vertical-align: middle;">4471103453</td>
+                                                                        <td style="vertical-align: middle;">carlos_flores@gmail.com</td>
+                                                                        <td style="vertical-align: middle;">29-01-2021</td>
+                                                                        <td style="vertical-align: middle;"><button style="border-radius: 14px;" class="btn btn-warning "><i class="bi-pencil text-white"></i></button> <button style="border-radius: 14px;" class="btn btn-danger ms-2 "><i class="bi-x-circle text-white"></i></button></td>
+                                                                    </tr>
+                                                                    <tr style="border-bottom: 0.4px solid rgba(128, 128, 128, 0.247);" class="">
+                                                                        <td style="vertical-align: middle;">Diego</td>
+                                                                        <td style="vertical-align: middle;" >Morales</td>
+                                                                        <td style="vertical-align: middle;">Garduño</td>
+                                                                        <td style="vertical-align: middle;">Masculino</td>
+                                                                        <td style="vertical-align: middle;">Anesteciologo</td>
+                                                                        <td style="vertical-align: middle;">4471103453</td>
+                                                                        <td style="vertical-align: middle;">diego_morales@gmail.com</td>
+                                                                        <td style="vertical-align: middle;">26-05-2020</td>
+                                                                        <td style="vertical-align: middle;"><button style="border-radius: 14px;" class="btn btn-warning "><i class="bi-pencil text-white"></i></button> <button style="border-radius: 14px;" class="btn btn-danger ms-2 "><i class="bi-x-circle text-white"></i></button></td>
+                                                                    </tr>
+                                                                    <tr  style="border-bottom: 0.4px solid rgba(128, 128, 128, 0.247);"class="">
+                                                                        <td style="vertical-align: middle;">Diana</td>
+                                                                        <td style="vertical-align: middle;" >Juarez</td>
+                                                                        <td style="vertical-align: middle;">Perez</td>
+                                                                        <td style="vertical-align: middle;">Femenino</td>
+                                                                        <td style="vertical-align: middle;">Anesteciologo</td>
+                                                                        <td style="vertical-align: middle;">4471103453</td>
+                                                                        <td style="vertical-align: middle;">diana_juarez@gmail.com</td>
+                                                                        <td style="vertical-align: middle;">21-01-2023</td>
+                                                                        <td style="vertical-align: middle;"><button style="border-radius: 14px;" class="btn btn-warning "><i class="bi-pencil text-white"></i></button> <button style="border-radius: 14px;" class="btn btn-danger ms-2 "><i class="bi-x-circle text-white"></i></button></td>
+                                                                    </tr>
+                                                                    <tr style="border-bottom: 0.4px solid rgba(128, 128, 128, 0.247);" class="">
+                                                                        <td style="vertical-align: middle;">Juana</td>
+                                                                        <td style="vertical-align: middle;" >Martinez</td>
+                                                                        <td style="vertical-align: middle;">Suarez</td>
+                                                                        <td style="vertical-align: middle;">Femenino</td>
+                                                                        <td style="vertical-align: middle;">Cardiologia</td>
+                                                                        <td style="vertical-align: middle;">4471103453</td>
+                                                                        <td style="vertical-align: middle;">juana_martinez@gmail.com</td>
+                                                                        <td style="vertical-align: middle;">22-04-2019</td>
+                                                                        <td style="vertical-align: middle;"><button style="border-radius: 14px;" class="btn btn-warning "><i class="bi-pencil text-white"></i></button> <button style="border-radius: 14px;" class="btn btn-danger ms-2 "><i class="bi-x-circle text-white"></i></button></td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+
+                                                        </div>
+                                                    </div>
+
+                                                    
+                                                    <div class="row ms-1">
+                                                        <!--Contador de elementos-->
+                                                        <div class=" d-flex col-6 justify-content-start">
+                                                            <label class="ms-2 mt-4" style="color: rgb(114, 114, 114);" for="total">Total: <label class="fw-bold" style="color: rgb(114, 114, 114); " for="numeracion">3</label></label>
+                                                        </div>
+                                                        <!--Paginador-->
+                                                        <div  class=" col-6">
+                                                            <ul class="pagination justify-content-end mt-3">
+                                                                <li  class="page-item">
+                                                                    <a style="color: gray;" class="sinborde_pag ps-3 pe-3 ms-1 me-1 page-link" href="#" aria-label="Previous">
+                                                                        <i class="bi bi-arrow-left-short"></i>
+                                                                    </a>
+                                                                </li>
+                                                                <li  class="active page-item " ><a style="color: gray;" class="sinborde_pag  ps-3 pe-3 ms-1 me-1 page-link " href="#">1</a></li>
+                                                                <li  class="page-item"><a style="color: gray;" class="sinborde_pag ps-3 pe-3 ms-1 me-1 page-link" href="#">2</a></li>
+                                                                <li class="page-item"><a style="color: gray;" class="sinborde_pag  ps-3 pe-3 ms-1 me-1 page-link" href="#">3</a></li>
+                                                                <li class="page-item">
+                                                                    <a style="color: gray;" class="sinborde_pag ps-3 pe-3 ms-1 me-1 page-link" href="#" aria-label="Next">
+                                                                        <i class="bi bi-arrow-right-short"></i>
+                                                                    </a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                
+
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    
+                                        
+                                        
+                                                                                    
+                                    
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+    <script src="https://kit.fontawesome.com/542478b4b6.js " crossorigin="anonymous "></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script> 
+
+</body>
+
+
+</html>
