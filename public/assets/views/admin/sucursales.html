@@ -10,7 +10,7 @@
         <link rel="stylesheet" href="styles.css">
         <link rel="stylesheet" href="../../libs/splide/dist/css/splide.min.css">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
-        <title>Sucursales Administrador</title>
+        <title>Sucursales</title>
     
         <style>
             
@@ -32,7 +32,7 @@
                             </a>
                         </li>
                         <li class="clase_li pb-1 pt-1 nav-item">
-                            <a  class="modulos nav-link align-middle px-0">
+                            <a href="punto.html" class="modulos nav-link align-middle px-0">
                                 <i class="fs-4 bi-credit-card"></i> <span class="ms-1 d-none d-sm-inline">Punto de Venta</span>
                             </a>
                         </li>
@@ -42,7 +42,7 @@
                             </a>
                         </li>
                         <li class="clase_li pb-1 pt-1 nav-item">
-                            <a  class="modulos nav-link align-middle px-0">
+                            <a href="inventario.html" class="modulos nav-link align-middle px-0">
                                 <i class="fs-4 bi-clipboard2"></i> <span class="ms-1 d-none d-sm-inline">Inventario</span>
                             </a>
                         </li>
@@ -116,253 +116,17 @@
                             <div class="col-12">
                                 <div class="row pb-3">
                                     <!--Seleccion de sucursales-->
-                                    <div class="col-4 mb-3">
-                                        <div class="card shadow-sm border-0" style="border-radius: 17px; height: 100%;">
-                                            <div class="card-body p-4">
-                                                <div class="row">
-                                                    <div class="col-lg-12 d-flex">
+                                    <div class="col-4">
+                                        <div class="card mb-0 pb-0 shadow-sm border-0" data-bs-toggle="modal" data-bs-target="#myModal" style="border-radius: 17px; height: 100%; cursor: pointer;">
+                                            <div class="card-body d-flex align-items-center p-4">
+                                                <div class="row d-flex">
+                                                    <div class="col-lg-12 d-flex align-items-center pb-0 mb-0">
                                                         <div class="container d-flex align-items-center justify-content-center" style="width: 55px; height: 55px; background: linear-gradient(to right, #2f80ed, #56ccf2); border-radius: 50%; ">
-                                                            <i class="bi-calendar" style="color: white; font-size: 25px;"></i>
-                                                           </div>
-                                                        <div class="container">
-                                                            <h5 class="mb-0">Ciudad Hidalgo</h5>
-                                                            <p class="mb-0" style="font-size: x-small; color: gray;">Citas agendadas para hoy</p>
-                                                            <br>
-                                                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal">Ver</button>
-                                                            <div class="modal" id="myModal">
-                                                                <div class="modal-dialog modal-xl modal-dialog-centered">
-                                                                    <div class="modal-content">
-                                                                        <div class="text-end">
-                                                                            <button type="button" class="pt-3 pe-3 text-end btn-close" data-bs-dismiss="modal"></button>
-                                                                        </div> 
-                                                                        
-                                                                    <!-- Modal Header -->
-                                                                    <div style="margin-bottom: -30px;" class="modal-header border-0">
-                                                                        <div class="container">
-                                                                            <h5 class="mb-0">Revital Medic Sucursal Ciudad Hidalgo</h5>
-                                                                            <p class="mb-0" style="font-size: x-small; color: gray;">Av.Morelos #23, Colonia Centro, Ciudad Hidalgo ,Michoacán</p>
-                                                                            <br>
-                                                                        </div>
-                                                                    </div>
-                                                              
-                                                                    <!-- Modal body -->
-                                                                    <div class="modal-body">
-                                                                        <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
-                                                                            <li class="nav-item" role="presentation">
-                                                                              <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Citas <label class="fondo_cont" for="con-citas">12</label></button>
-                                                                            </li>
-                                                                            <li class="nav-item" role="presentation">
-                                                                              <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Pacientes <label class="fondo_cont" for="con-pac">12</label></button>
-                                                                            </li>
-                                                                            <li class="nav-item" role="presentation">
-                                                                              <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">Médicos <label class="fondo_cont" for="con-medic">20</label></button>
-                                                                            </li>
-                                                                          </ul>
-                                                                          <div class="tab-content" id="pills-tabContent">
-                                                                                <!--Citas-->
-                                                                                <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
-                                                                                    <!--Buscador-->
-                                                                                    <div class="row mt-2 mb-2">
-                                                                                        <div class="col-4">
-                                                                                            <input type="text" style="border: 0.5px solid rgba(139, 138, 138, 0.301); font-size: small; height: 45px; border-radius: 10px; width: 100%;" class="form-control" placeholder="Buscar">
-                                                                                        </div>
-                                                                                    </div>
-
-                                                                                    <!--Tabla-->
-                                                                                    <div class="col-12">
-                                                                                        <div class=" table-responsive">
-                                                                                            <table class="table mt-2 table-borderless">
-                                                                                                <thead style="border-bottom: 0.4px solid rgba(128, 128, 128, 0.247); background-color: rgb(250, 249, 249);" class="bg-gray" >
-                                                                                                  <tr style="color: rgb(114, 114, 114);">
-                                                                                                    <th scope="col">Paciente</th>
-                                                                                                    <th scope="col">Fecha</th>
-                                                                                                    <th scope="col">Horario</th>
-                                                                                                    <th scope="col">Estado</th>
-                                                                                                </thead>
-                                                                                                <tbody>
-                                                                                                    <tr class="border-bottom">
-                                                                                                        <td style="vertical-align: middle;">
-                                                                                                            <span class="status-pendiente online me-2"></span>
-                                                                                                            Mariano Rangel Blanco
-                                                                                                        </td>
-                                                                                                        <td style="vertical-align: middle;">01-04-2023</td>
-                                                                                                        <td style="vertical-align: middle;">10:30 am</td>
-                                                                                                        <td style="vertical-align: middle;">Pendiente</td>
-                                                                                                    </tr>
-                                
-                                                                                                    <tr class="border-bottom">
-                                                                                                        <td style="vertical-align: middle;">
-                                                                                                            <span class="status-pendiente online me-2"></span>
-                                                                                                            Denilson Octavio Cruz Solis
-                                                                                                        </td>
-                                                                                                        <td style="vertical-align: middle;">01-04-2023</td>
-                                                                                                        <td style="vertical-align: middle;">10:30 am</td>
-                                                                                                        <td style="vertical-align: middle;">Pendiente</td>
-                                                                                                    </tr>
-                                
-                                                                                                    <tr class="border-bottom">
-                                                                                                        <td style="vertical-align: middle;">
-                                                                                                            <span class="status-pendiente online me-2"></span>
-                                                                                                            Julian Garcia Marin
-                                                                                                        </td>
-                                                                                                        <td style="vertical-align: middle;">01-04-2023</td>
-                                                                                                        <td style="vertical-align: middle;">10:30 am</td>
-                                                                                                        <td style="vertical-align: middle;">Pendiente</td>
-                                                                                                    </tr>
-                                                                                                   
-                                                                                                </tbody>
-                                                                                            </table>
-                                
-                                                                                        </div>
-                                                                                    </div>
-
-
-                                                                                </div>
-                                                                                <!--Pacientes-->
-                                                                                <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
-                                                                                    <div class="row mt-2 mb-2">
-                                                                                        <div class="col-4">
-                                                                                            <input type="text" style="border: 0.5px solid rgba(139, 138, 138, 0.301); font-size: small; height: 45px; border-radius: 10px; width: 100%;" class="form-control" placeholder="Buscar">
-                                                                                        </div>
-                                                                                    </div>
-
-                                                                                    <div class="col-12">
-                                                                                        <div class="table-responsive">
-                                                                                            <table class="table mt-2 table-borderless">
-                                                                                                <thead style="border-bottom: 0.4px solid rgba(128, 128, 128, 0.247); background-color: rgb(250, 249, 249);" class="bg-gray" >
-                                                                                                  <tr style="color: rgb(114, 114, 114);">
-                                                                                                    <th scope="col">Nombre</th>
-                                                                                                    <th scope="col">Estado de paciente</th>
-                                                                                                    <th scope="col">Correo Electrónico</th>
-                                                                                                    <th scope="col">Teléfono</th>
-                                                                                                    <th scope="col">Fecha de Registro</th>
-                                                                                                    <th scope="col">Sexo</th>
-                                                                                                </thead>
-                                                                                                <tbody>
-                                                                                                    <tr  style="border-bottom: 0.4px solid rgba(128, 128, 128, 0.247);" class="">
-                                                                                                        <td style="vertical-align: middle;">Mariano Rangel Blanco</td>
-                                                                                                        <td style="vertical-align: middle;">Atendido</td>
-                                                                                                        <td style="vertical-align: middle;">mariano_rangel@gmail.com</td>
-                                                                                                        <td style="vertical-align: middle;">7861234567</td>
-                                                                                                        <td style="vertical-align: middle;">29-03-2023</td>
-                                                                                                        <td style="vertical-align: middle;">Masculino</td>
-                                                                                                    </tr>
-                                                                                                    <tr  style="border-bottom: 0.4px solid rgba(128, 128, 128, 0.247);" class="">
-                                                                                                        <td style="vertical-align: middle;">Mariano Rangel Blanco</td>
-                                                                                                        <td style="vertical-align: middle;">Atendido</td>
-                                                                                                        <td style="vertical-align: middle;">mariano_rangel@gmail.com</td>
-                                                                                                        <td style="vertical-align: middle;">7861234567</td>
-                                                                                                        <td style="vertical-align: middle;">29-03-2023</td>
-                                                                                                        <td style="vertical-align: middle;">Masculino</td>
-                                                                                                    </tr>
-                                                                                                    <tr  style="border-bottom: 0.4px solid rgba(128, 128, 128, 0.247);" class="">
-                                                                                                        <td style="vertical-align: middle;">Mariano Rangel Blanco</td>
-                                                                                                        <td style="vertical-align: middle;">Atendido</td>
-                                                                                                        <td style="vertical-align: middle;">mariano_rangel@gmail.com</td>
-                                                                                                        <td style="vertical-align: middle;">7861234567</td>
-                                                                                                        <td style="vertical-align: middle;">29-03-2023</td>
-                                                                                                        <td style="vertical-align: middle;">Masculino</td>
-                                                                                                    </tr>
-                                                                                                    <tr  style="border-bottom: 0.4px solid rgba(128, 128, 128, 0.247);" class="">
-                                                                                                        <td style="vertical-align: middle;">Mariano Rangel Blanco</td>
-                                                                                                        <td style="vertical-align: middle;">Atendido</td>
-                                                                                                        <td style="vertical-align: middle;">mariano_rangel@gmail.com</td>
-                                                                                                        <td style="vertical-align: middle;">7861234567</td>
-                                                                                                        <td style="vertical-align: middle;">29-03-2023</td>
-                                                                                                        <td style="vertical-align: middle;">Masculino</td>
-                                                                                                    </tr>
-                                                                                                    <tr  style="border-bottom: 0.4px solid rgba(128, 128, 128, 0.247);" class="">
-                                                                                                        <td style="vertical-align: middle;">Mariano Rangel Blanco</td>
-                                                                                                        <td style="vertical-align: middle;">Atendido</td>
-                                                                                                        <td style="vertical-align: middle;">mariano_rangel@gmail.com</td>
-                                                                                                        <td style="vertical-align: middle;">7861234567</td>
-                                                                                                        <td style="vertical-align: middle;">29-03-2023</td>
-                                                                                                        <td style="vertical-align: middle;">Masculino</td>
-                                                                                                    </tr>
-                                                                                                </tbody>
-                                                                                            </table>
-                                
-                                                                                        </div>
-                                                                                    </div>
-                                                                                </div>
-                                                                                <!--Médicos-->
-                                                                                <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
-                                                                                    <!--Buscador-->
-                                                                                    <div class="row mt-2 mb-2">
-                                                                                        <div class="col-4">
-                                                                                            <input type="text" style="border: 0.5px solid rgba(139, 138, 138, 0.301); font-size: small; height: 45px; border-radius: 10px; width: 100%;" class="form-control" placeholder="Buscar">
-                                                                                        </div>
-                                                                                    </div>
-
-                                                                                    <!--Tabla-->
-                                                                                    <div class="col-12">
-                                                                                        <div class="table-responsive">
-                                                                                            <table class="table mt-2 table-borderless">
-                                                                                                <thead style="background-color: rgb(250, 249, 249);" class="bg-gray" >
-                                                                                                  <tr style="border-bottom: 0.4px solid rgba(128, 128, 128, 0.247); color: rgb(114, 114, 114);">
-                                                                                                    <th scope="col">Nombre</th>
-                                                                                                    <th scope="col">Apellido Paterno</th>
-                                                                                                    <th scope="col">Apellido Materno</th>
-                                                                                                    <th scope="col">Sexo</th>
-                                                                                                    <th scope="col">Especialidad</th>
-                                                                                                    <th scope="col">Teléfono</th>
-                                                                                                    <th scope="col">Correo Electrónico</th>
-                                                                                                    <th scope="col">Fecha de Registro</th>
-                                                                                                </thead>
-                                                                                                <tbody>
-                                                                                                    <tr style="border-bottom: 0.4px solid rgba(128, 128, 128, 0.247);" class="">
-                                                                                                        <td style="vertical-align: middle;">Carlos</td>
-                                                                                                        <td style="vertical-align: middle;" >Valdes</td>
-                                                                                                        <td style="vertical-align: middle;">Vera</td>
-                                                                                                        <td style="vertical-align: middle;">Masculino</td>
-                                                                                                        <td style="vertical-align: middle;">Traumatología</td>
-                                                                                                        <td style="vertical-align: middle;">4471103453</td>
-                                                                                                        <td style="vertical-align: middle;">carlos_valdes@gmail.com</td>
-                                                                                                        <td style="vertical-align: middle;">29-03-2023</td>
-                                                                                                    </tr>
-                                                                                                    <tr style="border-bottom: 0.4px solid rgba(128, 128, 128, 0.247);" class="">
-                                                                                                        <td style="vertical-align: middle;">Carlos</td>
-                                                                                                        <td style="vertical-align: middle;" >Valdes</td>
-                                                                                                        <td style="vertical-align: middle;">Vera</td>
-                                                                                                        <td style="vertical-align: middle;">Masculino</td>
-                                                                                                        <td style="vertical-align: middle;">Traumatología</td>
-                                                                                                        <td style="vertical-align: middle;">4471103453</td>
-                                                                                                        <td style="vertical-align: middle;">carlos_valdes@gmail.com</td>
-                                                                                                        <td style="vertical-align: middle;">29-03-2023</td>
-                                                                                                    </tr>
-                                                                                                    <tr style="border-bottom: 0.4px solid rgba(128, 128, 128, 0.247);" class="">
-                                                                                                        <td style="vertical-align: middle;">Carlos</td>
-                                                                                                        <td style="vertical-align: middle;" >Valdes</td>
-                                                                                                        <td style="vertical-align: middle;">Vera</td>
-                                                                                                        <td style="vertical-align: middle;">Masculino</td>
-                                                                                                        <td style="vertical-align: middle;">Traumatología</td>
-                                                                                                        <td style="vertical-align: middle;">4471103453</td>
-                                                                                                        <td style="vertical-align: middle;">carlos_valdes@gmail.com</td>
-                                                                                                        <td style="vertical-align: middle;">29-03-2023</td>
-                                                                                                    </tr>
-                                                                                                    <tr style="border-bottom: 0.4px solid rgba(128, 128, 128, 0.247);" class="">
-                                                                                                        <td style="vertical-align: middle;">Carlos</td>
-                                                                                                        <td style="vertical-align: middle;" >Valdes</td>
-                                                                                                        <td style="vertical-align: middle;">Vera</td>
-                                                                                                        <td style="vertical-align: middle;">Masculino</td>
-                                                                                                        <td style="vertical-align: middle;">Traumatología</td>
-                                                                                                        <td style="vertical-align: middle;">4471103453</td>
-                                                                                                        <td style="vertical-align: middle;">carlos_valdes@gmail.com</td>
-                                                                                                        <td style="vertical-align: middle;">29-03-2023</td>
-                                                                                                    </tr>
-
-                                                                                                </tbody>
-                                                                                            </table>
-                                                                                        
-                                                                                        </div>
-                                                                                    </div>
-                                                                                </div>
-                                                                          </div>
-                                                                    </div>
-                                                              
-                                                                  </div>
-                                                                </div>
-                                                              </div>
+                                                            <i class="bi-hospital" style="color: white; font-size: 25px;"></i>
+                                                        </div>
+                                                        <div class="container mb-0 pb-0">
+                                                            <h5 class="mb-0 mt-2">RevitalMedic Ciudad Hidalgo</h5>
+                                                            <p class="mb-0 mt-1" style="font-size: small; color: gray;">Av. Juarez #23, Col. Centro, Ciudad Hidalgo, Michoacán<p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -381,6 +145,252 @@
             </div>
         </div>
     </div>
+
+
+
+
+
+    <!-- MODALES-->
+
+
+    <div class="modal" id="myModal">
+        <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content" style="border: none; border-radius: 15px;">
+                <div class="text-end">
+                    <button type="button" class="pt-3 pe-3 text-end btn-close" data-bs-dismiss="modal"></button>
+                </div> 
+                
+            <!-- Modal Header -->
+            <div class="modal-header border-0 p-0 mb-1">
+                <div class="container-fluid">
+                    <h4 class="mb-0">Revital Medic Sucursal Ciudad Hidalgo</h4>
+                    <p class="mb-0" style="font-size: x-small; color: gray;">Av.Morelos #23, Colonia Centro, Ciudad Hidalgo ,Michoacán</p>
+                    <br>
+                </div>
+            </div>
+      
+            <!-- Modal body -->
+            <div class="modal-body">
+                <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                      <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Citas <label class="fondo_cont" for="con-citas">12</label></button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Pacientes <label class="fondo_cont" for="con-pac">12</label></button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">Médicos <label class="fondo_cont" for="con-medic">20</label></button>
+                    </li>
+                  </ul>
+                  <div class="tab-content" id="pills-tabContent">
+                        <!--Citas-->
+                        <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+                            <!--Buscador-->
+                            <div class="row mt-2 mb-2">
+                                <div class="col-4">
+                                    <input type="text" style="border: 0.5px solid rgba(139, 138, 138, 0.301); font-size: small; height: 45px; border-radius: 10px; width: 100%;" class="form-control" placeholder="Buscar">
+                                </div>
+                            </div>
+
+                            <!--Tabla-->
+                            <div class="col-12">
+                                <div class=" table-responsive">
+                                    <table class="table mt-2 table-borderless">
+                                        <thead style="border-bottom: 0.4px solid rgba(128, 128, 128, 0.247); background-color: rgb(250, 249, 249);" class="bg-gray" >
+                                          <tr style="color: rgb(114, 114, 114);">
+                                            <th scope="col">Paciente</th>
+                                            <th scope="col">Fecha</th>
+                                            <th scope="col">Horario</th>
+                                            <th scope="col">Estado</th>
+                                        </thead>
+                                        <tbody>
+                                            <tr class="border-bottom">
+                                                <td style="vertical-align: middle;">
+                                                    <span class="status-pendiente online me-2"></span>
+                                                    Mariano Rangel Blanco
+                                                </td>
+                                                <td style="vertical-align: middle;">01-04-2023</td>
+                                                <td style="vertical-align: middle;">10:30 am</td>
+                                                <td style="vertical-align: middle;">Pendiente</td>
+                                            </tr>
+
+                                            <tr class="border-bottom">
+                                                <td style="vertical-align: middle;">
+                                                    <span class="status-pendiente online me-2"></span>
+                                                    Denilson Octavio Cruz Solis
+                                                </td>
+                                                <td style="vertical-align: middle;">01-04-2023</td>
+                                                <td style="vertical-align: middle;">10:30 am</td>
+                                                <td style="vertical-align: middle;">Pendiente</td>
+                                            </tr>
+
+                                            <tr class="border-bottom">
+                                                <td style="vertical-align: middle;">
+                                                    <span class="status-pendiente online me-2"></span>
+                                                    Julian Garcia Marin
+                                                </td>
+                                                <td style="vertical-align: middle;">01-04-2023</td>
+                                                <td style="vertical-align: middle;">10:30 am</td>
+                                                <td style="vertical-align: middle;">Pendiente</td>
+                                            </tr>
+                                           
+                                        </tbody>
+                                    </table>
+
+                                </div>
+                            </div>
+
+
+                        </div>
+                        <!--Pacientes-->
+                        <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+                            <div class="row mt-2 mb-2">
+                                <div class="col-4">
+                                    <input type="text" style="border: 0.5px solid rgba(139, 138, 138, 0.301); font-size: small; height: 45px; border-radius: 10px; width: 100%;" class="form-control" placeholder="Buscar">
+                                </div>
+                            </div>
+
+                            <div class="col-12">
+                                <div class="table-responsive">
+                                    <table class="table mt-2 table-borderless">
+                                        <thead style="border-bottom: 0.4px solid rgba(128, 128, 128, 0.247); background-color: rgb(250, 249, 249);" class="bg-gray" >
+                                          <tr style="color: rgb(114, 114, 114);">
+                                            <th scope="col">Nombre</th>
+                                            <th scope="col">Estado de paciente</th>
+                                            <th scope="col">Correo Electrónico</th>
+                                            <th scope="col">Teléfono</th>
+                                            <th scope="col">Fecha de Registro</th>
+                                            <th scope="col">Sexo</th>
+                                        </thead>
+                                        <tbody>
+                                            <tr  style="border-bottom: 0.4px solid rgba(128, 128, 128, 0.247);" class="">
+                                                <td style="vertical-align: middle;">Mariano Rangel Blanco</td>
+                                                <td style="vertical-align: middle;">Atendido</td>
+                                                <td style="vertical-align: middle;">mariano_rangel@gmail.com</td>
+                                                <td style="vertical-align: middle;">7861234567</td>
+                                                <td style="vertical-align: middle;">29-03-2023</td>
+                                                <td style="vertical-align: middle;">Masculino</td>
+                                            </tr>
+                                            <tr  style="border-bottom: 0.4px solid rgba(128, 128, 128, 0.247);" class="">
+                                                <td style="vertical-align: middle;">Mariano Rangel Blanco</td>
+                                                <td style="vertical-align: middle;">Atendido</td>
+                                                <td style="vertical-align: middle;">mariano_rangel@gmail.com</td>
+                                                <td style="vertical-align: middle;">7861234567</td>
+                                                <td style="vertical-align: middle;">29-03-2023</td>
+                                                <td style="vertical-align: middle;">Masculino</td>
+                                            </tr>
+                                            <tr  style="border-bottom: 0.4px solid rgba(128, 128, 128, 0.247);" class="">
+                                                <td style="vertical-align: middle;">Mariano Rangel Blanco</td>
+                                                <td style="vertical-align: middle;">Atendido</td>
+                                                <td style="vertical-align: middle;">mariano_rangel@gmail.com</td>
+                                                <td style="vertical-align: middle;">7861234567</td>
+                                                <td style="vertical-align: middle;">29-03-2023</td>
+                                                <td style="vertical-align: middle;">Masculino</td>
+                                            </tr>
+                                            <tr  style="border-bottom: 0.4px solid rgba(128, 128, 128, 0.247);" class="">
+                                                <td style="vertical-align: middle;">Mariano Rangel Blanco</td>
+                                                <td style="vertical-align: middle;">Atendido</td>
+                                                <td style="vertical-align: middle;">mariano_rangel@gmail.com</td>
+                                                <td style="vertical-align: middle;">7861234567</td>
+                                                <td style="vertical-align: middle;">29-03-2023</td>
+                                                <td style="vertical-align: middle;">Masculino</td>
+                                            </tr>
+                                            <tr  style="border-bottom: 0.4px solid rgba(128, 128, 128, 0.247);" class="">
+                                                <td style="vertical-align: middle;">Mariano Rangel Blanco</td>
+                                                <td style="vertical-align: middle;">Atendido</td>
+                                                <td style="vertical-align: middle;">mariano_rangel@gmail.com</td>
+                                                <td style="vertical-align: middle;">7861234567</td>
+                                                <td style="vertical-align: middle;">29-03-2023</td>
+                                                <td style="vertical-align: middle;">Masculino</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+
+                                </div>
+                            </div>
+                        </div>
+                        <!--Médicos-->
+                        <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
+                            <!--Buscador-->
+                            <div class="row mt-2 mb-2">
+                                <div class="col-4">
+                                    <input type="text" style="border: 0.5px solid rgba(139, 138, 138, 0.301); font-size: small; height: 45px; border-radius: 10px; width: 100%;" class="form-control" placeholder="Buscar">
+                                </div>
+                            </div>
+
+                            <!--Tabla-->
+                            <div class="col-12">
+                                <div class="table-responsive">
+                                    <table class="table mt-2 table-borderless">
+                                        <thead style="background-color: rgb(250, 249, 249);" class="bg-gray" >
+                                          <tr style="border-bottom: 0.4px solid rgba(128, 128, 128, 0.247); color: rgb(114, 114, 114);">
+                                            <th scope="col">Nombre</th>
+                                            <th scope="col">Apellido Paterno</th>
+                                            <th scope="col">Apellido Materno</th>
+                                            <th scope="col">Sexo</th>
+                                            <th scope="col">Especialidad</th>
+                                            <th scope="col">Teléfono</th>
+                                            <th scope="col">Correo Electrónico</th>
+                                            <th scope="col">Fecha de Registro</th>
+                                        </thead>
+                                        <tbody>
+                                            <tr style="border-bottom: 0.4px solid rgba(128, 128, 128, 0.247);" class="">
+                                                <td style="vertical-align: middle;">Carlos</td>
+                                                <td style="vertical-align: middle;" >Valdes</td>
+                                                <td style="vertical-align: middle;">Vera</td>
+                                                <td style="vertical-align: middle;">Masculino</td>
+                                                <td style="vertical-align: middle;">Traumatología</td>
+                                                <td style="vertical-align: middle;">4471103453</td>
+                                                <td style="vertical-align: middle;">carlos_valdes@gmail.com</td>
+                                                <td style="vertical-align: middle;">29-03-2023</td>
+                                            </tr>
+                                            <tr style="border-bottom: 0.4px solid rgba(128, 128, 128, 0.247);" class="">
+                                                <td style="vertical-align: middle;">Carlos</td>
+                                                <td style="vertical-align: middle;" >Valdes</td>
+                                                <td style="vertical-align: middle;">Vera</td>
+                                                <td style="vertical-align: middle;">Masculino</td>
+                                                <td style="vertical-align: middle;">Traumatología</td>
+                                                <td style="vertical-align: middle;">4471103453</td>
+                                                <td style="vertical-align: middle;">carlos_valdes@gmail.com</td>
+                                                <td style="vertical-align: middle;">29-03-2023</td>
+                                            </tr>
+                                            <tr style="border-bottom: 0.4px solid rgba(128, 128, 128, 0.247);" class="">
+                                                <td style="vertical-align: middle;">Carlos</td>
+                                                <td style="vertical-align: middle;" >Valdes</td>
+                                                <td style="vertical-align: middle;">Vera</td>
+                                                <td style="vertical-align: middle;">Masculino</td>
+                                                <td style="vertical-align: middle;">Traumatología</td>
+                                                <td style="vertical-align: middle;">4471103453</td>
+                                                <td style="vertical-align: middle;">carlos_valdes@gmail.com</td>
+                                                <td style="vertical-align: middle;">29-03-2023</td>
+                                            </tr>
+                                            <tr style="border-bottom: 0.4px solid rgba(128, 128, 128, 0.247);" class="">
+                                                <td style="vertical-align: middle;">Carlos</td>
+                                                <td style="vertical-align: middle;" >Valdes</td>
+                                                <td style="vertical-align: middle;">Vera</td>
+                                                <td style="vertical-align: middle;">Masculino</td>
+                                                <td style="vertical-align: middle;">Traumatología</td>
+                                                <td style="vertical-align: middle;">4471103453</td>
+                                                <td style="vertical-align: middle;">carlos_valdes@gmail.com</td>
+                                                <td style="vertical-align: middle;">29-03-2023</td>
+                                            </tr>
+
+                                        </tbody>
+                                    </table>
+                                
+                                </div>
+                            </div>
+                        </div>
+                  </div>
+            </div>
+      
+          </div>
+        </div>
+      </div>
+
+
+
+
     <script src="https://kit.fontawesome.com/542478b4b6.js " crossorigin="anonymous "></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script> 

@@ -10,7 +10,7 @@
         <link rel="stylesheet" href="styles.css">
         <link rel="stylesheet" href="../../libs/splide/dist/css/splide.min.css">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
-        <title>Modulo Usuarios Administrador</title>
+        <title>Usuarios</title>
     
         <style>
             
@@ -33,7 +33,7 @@
                             </a>
                         </li>
                         <li class="clase_li pb-1 pt-1 nav-item">
-                            <a  class="modulos nav-link align-middle px-0">
+                            <a href="punto.html" class="modulos nav-link align-middle px-0">
                                 <i class="fs-4 bi-credit-card"></i> <span class="ms-1 d-none d-sm-inline">Punto de Venta</span>
                             </a>
                         </li>
@@ -43,7 +43,7 @@
                             </a>
                         </li>
                         <li class="clase_li pb-1 pt-1 nav-item">
-                            <a  class="modulos nav-link align-middle px-0">
+                            <a href="inventario.html" class="modulos nav-link align-middle px-0">
                                 <i class="fs-4 bi-clipboard2"></i> <span class="ms-1 d-none d-sm-inline">Inventario</span>
                             </a>
                         </li>
@@ -120,12 +120,12 @@
                                 <div class="row text-center">
                                     <div class="col-12">
                                         <div class="card shadow-sm border-0" style="border-radius: 17px; height: 100%;">
-                                            <div class="card-body">
+                                            <div class="card-body pt-0 mt-0">
                                                 <div class="row">
                                                     <div class="row mt-4">
-                                                        <div class=" justify-content-start col-6">
-                                                            <label style="font-size: large; " class="fw-bold d-flex justify-content-start" for="citas">LISTA DE USUARIOS</label>
-                                                            <label style="font-size: small;" class="d-flex justify-content-start " for="citas">Información de Usuarios</label>
+                                                        <div class="text-start col-6">
+                                                            <h5 style="font-size: large; " class="pb-0 mb-0" >Lista de usuarios</h5>
+                                                            <p style="font-size: small; color: gray" class=" pt-0 mt-1" >Información de usuarios registrados.</p>
                                                         </div>
                                                         <div class="d-flex justify-content-end col-6">
                                                             <button style="height: 45px; color: white; border-radius: 10px;" class="btn btn-dark btn-sm btn-success pt-2 pb-2 ps-3 pe-3 me-2">Agregar usuario</button>
@@ -151,14 +151,13 @@
                                                         <div class="table-responsive">
                                                             <table class="table mt-2 table-borderless">
                                                                 <thead style="border-bottom: 0.4px solid rgba(128, 128, 128, 0.247);  background-color: rgb(250, 249, 249);" class="bg-gray" >
-                                                                  <tr style="color: rgb(114, 114, 114);">
-                                                                    <th scope="col">Nombre</th>
-                                                                    <th scope="col">Teléfono</th>
-                                                                    <th scope="col">Tipo de Usuario</th>
-                                                                    <th scope="col">Especialidad</th>
-                                                                    <th scope="col">Correo Electrónico</th>
-                                                                    <th scope="col">Fecha de Registro</th>
-                                                                    <th scope="col">Acciones</th>
+                                                                    <th scope="col" style="text-align: left; color: gray; font-size: small; font-weight: 500;">Nombre</th>
+                                                                    <th scope="col" style="text-align: left; color: gray; font-size: small; font-weight: 500;">Teléfono</th>
+                                                                    <th scope="col" style="text-align: left; color: gray; font-size: small; font-weight: 500;">Tipo de Usuario</th>
+                                                                    <th scope="col" style="text-align: left; color: gray; font-size: small; font-weight: 500;">Especialidad</th>
+                                                                    <th scope="col" style="text-align: left; color: gray; font-size: small; font-weight: 500;">Correo Electrónico</th>
+                                                                    <th scope="col" style="text-align: left; color: gray; font-size: small; font-weight: 500;">Fecha de Registro</th>
+                                                                    <th scope="col" style="text-align: left; color: gray; font-size: small; font-weight: 500;">Acciones</th>
                                                                 </thead>
                                                                 <tbody>
                                                                     <tr style="border-bottom: 0.4px solid rgba(128, 128, 128, 0.247);" class="">
@@ -170,87 +169,7 @@
                                                                         <td style="vertical-align: middle;">29-01-2023</td>
                                                                         <td style="vertical-align: middle;"><button style="border-radius: 14px;" class="btn btn-warning "><i class="bi-pencil text-white"></i></button> <button style="border-radius: 14px;" class="btn btn-danger ms-2 "><i class="bi-x-circle text-white"></i></button></td>
                                                                     </tr>
-                                                                    <tr style="border-bottom: 0.4px solid rgba(128, 128, 128, 0.247);" class="">
-                                                                        <td style="vertical-align: middle;">Gerardo Suarez Medina</td>
-                                                                        <td style="vertical-align: middle;">4471103453</td>
-                                                                        <td style="vertical-align: middle;" >Médico</td>
-                                                                        <td style="vertical-align: middle;">Especialidad</td>
-                                                                        <td style="vertical-align: middle;">gerardo_suarez@gmail.com</td>
-                                                                        <td style="vertical-align: middle;">29-01-2023</td>
-                                                                        <td style="vertical-align: middle;"><button style="border-radius: 14px;" class="btn btn-warning "><i class="bi-pencil text-white"></i></button> <button style="border-radius: 14px;" class="btn btn-danger ms-2 "><i class="bi-x-circle text-white"></i></button></td>
-                                                                    </tr>
-                                                                    <tr style="border-bottom: 0.4px solid rgba(128, 128, 128, 0.247);" class="">
-                                                                        <td style="vertical-align: middle;">Nicole Martinez Correa</td>
-                                                                        <td style="vertical-align: middle;">4471103453</td>
-                                                                        <td style="vertical-align: middle;" >Asistente</td>
-                                                                        <td style="vertical-align: middle;">Especialidad</td>
-                                                                        <td style="vertical-align: middle;">nicol_mtz@gmail.com</td>
-                                                                        <td style="vertical-align: middle;">29-01-2023</td>
-                                                                        <td style="vertical-align: middle;"><button style="border-radius: 14px;" class="btn btn-warning "><i class="bi-pencil text-white"></i></button> <button style="border-radius: 14px;" class="btn btn-danger ms-2 "><i class="bi-x-circle text-white"></i></button></td>
-                                                                    </tr>
-                                                                    <tr style="border-bottom: 0.4px solid rgba(128, 128, 128, 0.247);" class="">
-                                                                        <td style="vertical-align: middle;">Gerardo Suarez Medina</td>
-                                                                        <td style="vertical-align: middle;">4471103453</td>
-                                                                        <td style="vertical-align: middle;" >Médico</td>
-                                                                        <td style="vertical-align: middle;">Especialidad</td>
-                                                                        <td style="vertical-align: middle;">gerardo_suarez@gmail.com</td>
-                                                                        <td style="vertical-align: middle;">29-01-2023</td>
-                                                                        <td style="vertical-align: middle;"><button style="border-radius: 14px;" class="btn btn-warning "><i class="bi-pencil text-white"></i></button> <button style="border-radius: 14px;" class="btn btn-danger ms-2 "><i class="bi-x-circle text-white"></i></button></td>
-                                                                    </tr>
-                                                                    <tr style="border-bottom: 0.4px solid rgba(128, 128, 128, 0.247);" class="">
-                                                                        <td style="vertical-align: middle;">Nicole Martinez Correa</td>
-                                                                        <td style="vertical-align: middle;">4471103453</td>
-                                                                        <td style="vertical-align: middle;" >Asistente</td>
-                                                                        <td style="vertical-align: middle;">Especialidad</td>
-                                                                        <td style="vertical-align: middle;">nicol_mtz@gmail.com</td>
-                                                                        <td style="vertical-align: middle;">29-01-2023</td>
-                                                                        <td style="vertical-align: middle;"><button style="border-radius: 14px;" class="btn btn-warning "><i class="bi-pencil text-white"></i></button> <button style="border-radius: 14px;" class="btn btn-danger ms-2 "><i class="bi-x-circle text-white"></i></button></td>
-                                                                    </tr>
-                                                                    <tr style="border-bottom: 0.4px solid rgba(128, 128, 128, 0.247);" class="">
-                                                                        <td style="vertical-align: middle;">Gerardo Suarez Medina</td>
-                                                                        <td style="vertical-align: middle;">4471103453</td>
-                                                                        <td style="vertical-align: middle;" >Médico</td>
-                                                                        <td style="vertical-align: middle;">Especialidad</td>
-                                                                        <td style="vertical-align: middle;">gerardo_suarez@gmail.com</td>
-                                                                        <td style="vertical-align: middle;">29-01-2023</td>
-                                                                        <td style="vertical-align: middle;"><button style="border-radius: 14px;" class="btn btn-warning "><i class="bi-pencil text-white"></i></button> <button style="border-radius: 14px;" class="btn btn-danger ms-2 "><i class="bi-x-circle text-white"></i></button></td>
-                                                                    </tr>
-                                                                    <tr style="border-bottom: 0.4px solid rgba(128, 128, 128, 0.247);" class="">
-                                                                        <td style="vertical-align: middle;">Nicole Martinez Correa</td>
-                                                                        <td style="vertical-align: middle;">4471103453</td>
-                                                                        <td style="vertical-align: middle;" >Asistente</td>
-                                                                        <td style="vertical-align: middle;">Especialidad</td>
-                                                                        <td style="vertical-align: middle;">nicol_mtz@gmail.com</td>
-                                                                        <td style="vertical-align: middle;">29-01-2023</td>
-                                                                        <td style="vertical-align: middle;"><button style="border-radius: 14px;" class="btn btn-warning "><i class="bi-pencil text-white"></i></button> <button style="border-radius: 14px;" class="btn btn-danger ms-2 "><i class="bi-x-circle text-white"></i></button></td>
-                                                                    </tr>
-                                                                    <tr style="border-bottom: 0.4px solid rgba(128, 128, 128, 0.247);" class="">
-                                                                        <td style="vertical-align: middle;">Gerardo Suarez Medina</td>
-                                                                        <td style="vertical-align: middle;">4471103453</td>
-                                                                        <td style="vertical-align: middle;" >Médico</td>
-                                                                        <td style="vertical-align: middle;">Especialidad</td>
-                                                                        <td style="vertical-align: middle;">gerardo_suarez@gmail.com</td>
-                                                                        <td style="vertical-align: middle;">29-01-2023</td>
-                                                                        <td style="vertical-align: middle;"><button style="border-radius: 14px;" class="btn btn-warning "><i class="bi-pencil text-white"></i></button> <button style="border-radius: 14px;" class="btn btn-danger ms-2 "><i class="bi-x-circle text-white"></i></button></td>
-                                                                    </tr>
-                                                                    <tr style="border-bottom: 0.4px solid rgba(128, 128, 128, 0.247);" class="">
-                                                                        <td style="vertical-align: middle;">Nicole Martinez Correa</td>
-                                                                        <td style="vertical-align: middle;">4471103453</td>
-                                                                        <td style="vertical-align: middle;" >Asistente</td>
-                                                                        <td style="vertical-align: middle;">Especialidad</td>
-                                                                        <td style="vertical-align: middle;">nicol_mtz@gmail.com</td>
-                                                                        <td style="vertical-align: middle;">29-01-2023</td>
-                                                                        <td style="vertical-align: middle;"><button style="border-radius: 14px;" class="btn btn-warning "><i class="bi-pencil text-white"></i></button> <button style="border-radius: 14px;" class="btn btn-danger ms-2 "><i class="bi-x-circle text-white"></i></button></td>
-                                                                    </tr>
-                                                                    <tr style="border-bottom: 0.4px solid rgba(128, 128, 128, 0.247);" class="">
-                                                                        <td style="vertical-align: middle;">Gerardo Suarez Medina</td>
-                                                                        <td style="vertical-align: middle;">4471103453</td>
-                                                                        <td style="vertical-align: middle;" >Médico</td>
-                                                                        <td style="vertical-align: middle;">Especialidad</td>
-                                                                        <td style="vertical-align: middle;">gerardo_suarez@gmail.com</td>
-                                                                        <td style="vertical-align: middle;">29-01-2023</td>
-                                                                        <td style="vertical-align: middle;"><button style="border-radius: 14px;" class="btn btn-warning "><i class="bi-pencil text-white"></i></button> <button style="border-radius: 14px;" class="btn btn-danger ms-2 "><i class="bi-x-circle text-white"></i></button></td>
-                                                                    </tr>
+                                                                
                                                                 </tbody>
                                                             </table>
 

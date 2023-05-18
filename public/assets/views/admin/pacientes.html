@@ -10,7 +10,7 @@
         <link rel="stylesheet" href="styles.css">
         <link rel="stylesheet" href="../../libs/splide/dist/css/splide.min.css">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
-        <title>Modulo Pacientes Administrador</title>
+        <title>Pacientes</title>
     
         <style>
             
@@ -33,7 +33,7 @@
                             </a>
                         </li>
                         <li class="clase_li pb-1 pt-1 nav-item">
-                            <a  class="modulos nav-link align-middle px-0">
+                            <a href="punto.html" class="modulos nav-link align-middle px-0">
                                 <i class="fs-4 bi-credit-card"></i> <span class="ms-1 d-none d-sm-inline">Punto de Venta</span>
                             </a>
                         </li>
@@ -43,7 +43,7 @@
                             </a>
                         </li>
                         <li class="clase_li pb-1 pt-1 nav-item">
-                            <a  class="modulos nav-link align-middle px-0">
+                            <a href="inventario.html" class="modulos nav-link align-middle px-0">
                                 <i class="fs-4 bi-clipboard2"></i> <span class="ms-1 d-none d-sm-inline">Inventario</span>
                             </a>
                         </li>
@@ -123,9 +123,9 @@
                                             <div class="card-body">
                                                 <div class="row">
                                                     <div class="row mt-4">
-                                                        <div class=" justify-content-start col-6">
-                                                            <label style="font-size: large; " class="fw-bold d-flex justify-content-start" for="citas">LISTA DE PACIENTES</label>
-                                                            <label style="font-size: small;" class="d-flex justify-content-start " for="citas">Información de pacientes</label>
+                                                        <div class="text-start col-6">
+                                                            <h5 style="font-size: large; " class="pb-0 mb-0" >Lista de pacientes</h5>
+                                                            <p style="font-size: small; color: gray" class=" pt-0 mt-1" >Información de pacientes</p>
                                                         </div>
                                                         <div class="d-flex justify-content-end col-6">
                                                             <button style="height: 45px; color: white; border-radius: 10px;" class="btn btn-dark btn-sm btn-success pt-2 pb-2 ps-3 pe-3 me-2">Agregar paciente</button>
@@ -151,194 +151,32 @@
                                                         <div class="table-responsive">
                                                             <table class="table mt-2 table-borderless">
                                                                 <thead style="border-bottom: 0.4px solid rgba(128, 128, 128, 0.247); background-color: rgb(250, 249, 249);" class="bg-gray" >
-                                                                  <tr style="color: rgb(114, 114, 114);">
-                                                                    <th scope="col">Nombre</th>
-                                                                    <th scope="col">Estado de paciente</th>
-                                                                    <th scope="col">Correo Electrónico</th>
-                                                                    <th scope="col">Teléfono</th>
-                                                                    <th scope="col">Fecha de Registro</th>
-                                                                    <th scope="col">Sexo</th>
-                                                                    <th scope="col">Acciones</th>
+                                                                    <th scope="col" style="text-align: left; color: gray; font-size: small; font-weight: 500;">Nombre</th>
+                                                                    <th scope="col"  style="text-align: center; color: gray; font-size: small; font-weight: 500;">Estado</th>
+                                                                    <th scope="col"  style="text-align: center; color: gray; font-size: small; font-weight: 500;">Correo Electrónico</th>
+                                                                    <th scope="col"  style="text-align: center; color: gray; font-size: small; font-weight: 500;">Teléfono</th>
+                                                                    <th scope="col"  style="text-align: left; color: gray; font-size: small; font-weight: 500;">Fecha de Registro</th>
+                                                                    <th scope="col"  style="text-align: center; color: gray; font-size: small; font-weight: 500;">Sexo</th>
+                                                                    <th scope="col"  style="text-align: center; color: gray; font-size: small; font-weight: 500;">Acciones</th>
+                                                                    
                                                                 </thead>
                                                                 <tbody>
                                                                     <tr  style="border-bottom: 0.4px solid rgba(128, 128, 128, 0.247);" class="">
-                                                                        <td style="vertical-align: middle;">Mariano Rangel Blanco</td>
+                                                                        <td style="vertical-align: middle; text-align: left;">Mariano Rangel Blanco</td>
                                                                         <td style="vertical-align: middle;">Atendidp</td>
                                                                         <td style="vertical-align: middle;">mariano_rangel@gmail.com</td>
                                                                         <td style="vertical-align: middle;">7861234567</td>
                                                                         <td style="vertical-align: middle;">29-03-2023</td>
                                                                         <td style="vertical-align: middle;">Masculino</td>
-                                                                        <td style="vertical-align: middle;">
-                                                                            <button style="border-radius: 14px;" class="btn btn-dark"><i class="bi-pencil text-white"></i></button> 
-                                                                            <button style="border-radius: 14px;" class="btn btn-warning "><i class="bi-pencil text-white"></i></button> 
-                                                                            <button style="border-radius: 14px;" class="btn btn-danger "><i class="bi-x-circle text-white"></i></button>
-                                                                            <button style="border-radius: 14px;" class="btn btn-dark">
-                                                                                <div class="form-check form-switch">
-                                                                                    <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
-                                                                                </div>
-                                                                            </button>
-                                                                        </td>
-                                                                    </tr>
-                                                                    <tr style="border-bottom: 0.4px solid rgba(128, 128, 128, 0.247);" class="">
-                                                                        <td style="vertical-align: middle;">Octavio Cruz Solis</td>
-                                                                        <td style="vertical-align: middle;">Pendiente</td>
-                                                                        <td style="vertical-align: middle;">octavio_solis@gmail.com</td>
-                                                                        <td style="vertical-align: middle;">4471267700</td>
-                                                                        <td style="vertical-align: middle;">29-03-2023</td>
-                                                                        <td style="vertical-align: middle;">Masculino</td>
-                                                                        <td style="vertical-align: middle;">
-                                                                            <button style="border-radius: 14px;" class="btn btn-dark"><i class="bi-pencil text-white"></i></button> 
-                                                                            <button style="border-radius: 14px;" class="btn btn-warning"><i class="bi-pencil text-white"></i></button> 
-                                                                            <button style="border-radius: 14px;" class="btn btn-danger"><i class="bi-x-circle text-white"></i></button>
-                                                                            <button style="border-radius: 14px;" class="btn btn-dark">
-                                                                                <div class="form-check form-switch">
-                                                                                    <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
-                                                                                </div>
-                                                                            </button>
-                                                                        </td>
-                                                                    </tr>
-                                                                    <tr style="border-bottom: 0.4px solid rgba(128, 128, 128, 0.247);"  class="">
-                                                                        <td style="vertical-align: middle;">Julieta Suarez Beltran</td>
-                                                                        <td style="vertical-align: middle;">Cancelado</td>
-                                                                        <td style="vertical-align: middle;">julieta_suarez@gmail.com</td>
-                                                                        <td style="vertical-align: middle;">4471206677</td>
-                                                                        <td style="vertical-align: middle;">29-03-2023</td>
-                                                                        <td style="vertical-align: middle;">Femenino</td>
-                                                                        <td style="vertical-align: middle;">
-                                                                            <button style="border-radius: 14px;" class="btn btn-dark"><i class="bi-pencil text-white"></i></button> 
-                                                                            <button style="border-radius: 14px;" class="btn btn-warning"><i class="bi-pencil text-white"></i></button> 
-                                                                            <button style="border-radius: 14px;" class="btn btn-danger"><i class="bi-x-circle text-white"></i></button>
-                                                                            <button style="border-radius: 14px;" class="btn btn-dark">
-                                                                                <div class="form-check form-switch">
-                                                                                    <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
-                                                                                </div>
-                                                                            </button>
-                                                                        </td>
-                                                                    </tr>
-                                                                    <tr style="border-bottom: 0.4px solid rgba(128, 128, 128, 0.247);"  class="">
-                                                                        <td style="vertical-align: middle;">Mariano Rangel Blanco</td>
-                                                                        <td style="vertical-align: middle;">Atendidp</td>
-                                                                        <td style="vertical-align: middle;">mariano_rangel@gmail.com</td>
-                                                                        <td style="vertical-align: middle;">7861234567</td>
-                                                                        <td style="vertical-align: middle;">29-03-2023</td>
-                                                                        <td style="vertical-align: middle;">Masculino</td>
-                                                                        <td style="vertical-align: middle;">
-                                                                            <button style="border-radius: 14px;" class="btn btn-dark"><i class="bi-pencil text-white"></i></button> 
-                                                                            <button style="border-radius: 14px;" class="btn btn-warning"><i class="bi-pencil text-white"></i></button> 
-                                                                            <button style="border-radius: 14px;" class="btn btn-danger"><i class="bi-x-circle text-white"></i></button>
-                                                                            <button style="border-radius: 14px;" class="btn btn-dark">
-                                                                                <div class="form-check form-switch">
-                                                                                    <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
-                                                                                </div>
-                                                                            </button>
-                                                                        </td>
-                                                                    </tr>
-                                                                    <tr style="border-bottom: 0.4px solid rgba(128, 128, 128, 0.247);"  class="">
-                                                                        <td style="vertical-align: middle;">Octavio Cruz Solis</td>
-                                                                        <td style="vertical-align: middle;">Pendiente</td>
-                                                                        <td style="vertical-align: middle;">octavio_solis@gmail.com</td>
-                                                                        <td style="vertical-align: middle;">4471267700</td>
-                                                                        <td style="vertical-align: middle;">29-03-2023</td>
-                                                                        <td style="vertical-align: middle;">Masculino</td>
-                                                                        <td style="vertical-align: middle;">
-                                                                            <button style="border-radius: 14px;" class="btn btn-dark"><i class="bi-pencil text-white"></i></button> 
-                                                                            <button style="border-radius: 14px;" class="btn btn-warning"><i class="bi-pencil text-white"></i></button> 
-                                                                            <button style="border-radius: 14px;" class="btn btn-danger"><i class="bi-x-circle text-white"></i></button>
-                                                                            <button style="border-radius: 14px;" class="btn btn-dark">
-                                                                                <div class="form-check form-switch">
-                                                                                    <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
-                                                                                </div>
-                                                                            </button>
-                                                                        </td>
-                                                                    </tr>
-                                                                    <tr style="border-bottom: 0.4px solid rgba(128, 128, 128, 0.247);"  class="">
-                                                                        <td style="vertical-align: middle;">Julieta Suarez Beltran</td>
-                                                                        <td style="vertical-align: middle;">Cancelado</td>
-                                                                        <td style="vertical-align: middle;">julieta_suarez@gmail.com</td>
-                                                                        <td style="vertical-align: middle;">4471206677</td>
-                                                                        <td style="vertical-align: middle;">29-03-2023</td>
-                                                                        <td style="vertical-align: middle;">Femenino</td>
-                                                                        <td style="vertical-align: middle;">
-                                                                            <button style="border-radius: 14px;" class="btn btn-dark"><i class="bi-pencil text-white"></i></button> 
-                                                                            <button style="border-radius: 14px;" class="btn btn-warning"><i class="bi-pencil text-white"></i></button> 
-                                                                            <button style="border-radius: 14px;" class="btn btn-danger"><i class="bi-x-circle text-white"></i></button>
-                                                                            <button style="border-radius: 14px;" class="btn btn-dark">
-                                                                                <div class="form-check form-switch">
-                                                                                    <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
-                                                                                </div>
-                                                                            </button>
-                                                                        </td>
-                                                                    </tr>
-                                                                    <tr style="border-bottom: 0.4px solid rgba(128, 128, 128, 0.247);"  class="">
-                                                                        <td style="vertical-align: middle;">Mariano Rangel Blanco</td>
-                                                                        <td style="vertical-align: middle;">Atendidp</td>
-                                                                        <td style="vertical-align: middle;">mariano_rangel@gmail.com</td>
-                                                                        <td style="vertical-align: middle;">7861234567</td>
-                                                                        <td style="vertical-align: middle;">29-03-2023</td>
-                                                                        <td style="vertical-align: middle;">Masculino</td>
-                                                                        <td style="vertical-align: middle;">
-                                                                            <button style="border-radius: 14px;" class="btn btn-dark"><i class="bi-pencil text-white"></i></button> 
-                                                                            <button style="border-radius: 14px;" class="btn btn-warning"><i class="bi-pencil text-white"></i></button> 
-                                                                            <button style="border-radius: 14px;" class="btn btn-danger"><i class="bi-x-circle text-white"></i></button>
-                                                                            <button style="border-radius: 14px;" class="btn btn-dark">
-                                                                                <div class="form-check form-switch">
-                                                                                    <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
-                                                                                </div>
-                                                                            </button>
-                                                                        </td>
-                                                                    </tr>
-                                                                    <tr style="border-bottom: 0.4px solid rgba(128, 128, 128, 0.247);"  class="">
-                                                                        <td style="vertical-align: middle;">Octavio Cruz Solis</td>
-                                                                        <td style="vertical-align: middle;">Pendiente</td>
-                                                                        <td style="vertical-align: middle;">octavio_solis@gmail.com</td>
-                                                                        <td style="vertical-align: middle;">4471267700</td>
-                                                                        <td style="vertical-align: middle;">29-03-2023</td>
-                                                                        <td style="vertical-align: middle;">Masculino</td>
-                                                                        <td style="vertical-align: middle;">
-                                                                            <button style="border-radius: 14px;" class="btn btn-dark"><i class="bi-pencil text-white"></i></button> 
-                                                                            <button style="border-radius: 14px;" class="btn btn-warning"><i class="bi-pencil text-white"></i></button> 
-                                                                            <button style="border-radius: 14px;" class="btn btn-danger"><i class="bi-x-circle text-white"></i></button>
-                                                                            <button style="border-radius: 14px;" class="btn btn-dark">
-                                                                                <div class="form-check form-switch">
-                                                                                    <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
-                                                                                </div>
-                                                                            </button>
-                                                                        </td>
-                                                                    </tr>
-                                                                    <tr style="border-bottom: 0.4px solid rgba(128, 128, 128, 0.247);"  class="">
-                                                                        <td style="vertical-align: middle;">Julieta Suarez Beltran</td>
-                                                                        <td style="vertical-align: middle;">Cancelado</td>
-                                                                        <td style="vertical-align: middle;">julieta_suarez@gmail.com</td>
-                                                                        <td style="vertical-align: middle;">4471206677</td>
-                                                                        <td style="vertical-align: middle;">29-03-2023</td>
-                                                                        <td style="vertical-align: middle;">Femenino</td>
-                                                                        <td style="vertical-align: middle;">
-                                                                            <button style="border-radius: 14px;" class="btn btn-dark"><i class="bi-pencil text-white"></i></button> 
-                                                                            <button style="border-radius: 14px;" class="btn btn-warning"><i class="bi-pencil text-white"></i></button> 
-                                                                            <button style="border-radius: 14px;" class="btn btn-danger"><i class="bi-x-circle text-white"></i></button>
-                                                                            <button style="border-radius: 14px;" class="btn btn-dark">
-                                                                                <div class="form-check form-switch">
-                                                                                    <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
-                                                                                </div>
-                                                                            </button>
-                                                                        </td>
-                                                                    </tr>
-                                                                    <tr style="border-bottom: 0.4px solid rgba(128, 128, 128, 0.247);"  class="">
-                                                                        <td style="vertical-align: middle;">Octavio Cruz Solis</td>
-                                                                        <td style="vertical-align: middle;">Pendiente</td>
-                                                                        <td style="vertical-align: middle;">octavio_solis@gmail.com</td>
-                                                                        <td style="vertical-align: middle;">4471267700</td>
-                                                                        <td style="vertical-align: middle;">29-03-2023</td>
-                                                                        <td style="vertical-align: middle;">Masculino</td>
-                                                                        <td style="vertical-align: middle;">
-                                                                            <button style="border-radius: 14px;" class="btn btn-dark"><i class="bi-pencil text-white"></i></button> 
-                                                                            <button style="border-radius: 14px;" class="btn btn-warning"><i class="bi-pencil text-white"></i></button> 
-                                                                            <button style="border-radius: 14px;" class="btn btn-danger"><i class="bi-x-circle text-white"></i></button>
-                                                                            <button style="border-radius: 14px;" class="btn btn-dark">
-                                                                                <div class="form-check form-switch">
-                                                                                    <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
-                                                                                </div>
-                                                                            </button>
+                                                                        <td class="d-flex justify-content-between align-items-center" style="vertical-align: middle;">
+                                                                            <button style="border-radius: 8px;" class="btn btn-dark btn-sm me-2"><i class="bi-eye text-white"></i></button> 
+                                                                            <button style="border-radius: 8px;" class="btn btn-warning btn-sm me-2"><i class="bi-pencil text-white"></i></button> 
+                                                                            <button style="border-radius: 8px;" class="btn btn-danger btn-sm me-2"><i class="bi-x-circle text-white"></i></button>
+                                                                            <label for="Bloquear" class="me-2" style="font-size: small;">Desactivar</label>
+                                                                            <div class="form-check form-switch">
+                                                                                
+                                                                                <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
+                                                                            </div>
                                                                         </td>
                                                                     </tr>
                                                                 </tbody>
