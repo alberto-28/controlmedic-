@@ -299,7 +299,7 @@
                                                                             <a href="#" class="mb-0 text-sm" style="font-size: small; font-weight: 500; text-decoration: none; color: black;">00129876544522</a>
                                                                         </td>
                                                                         <td class="" style="vertical-align: middle;">
-                                                                            <button class="btn btn-warning btn-sm me-2 m-0" style="border-radius: 10px;"><i class="bi bi-pencil-square" style="color: white; margin-top: -5rem !important;"></i></button>
+                                                                            <button data-bs-toggle="modal" data-bs-target="#modificar_producto" data-bs-backdrop="false" style="border-radius: 8px;" class="btn btn-warning btn-sm "><i class="bi-pencil text-white"></i></button> 
                                                                             <button class="btn btn-danger btn-sm" style="border-radius: 10px;"><i class="bi bi-trash" style="color: white;"></i></button>
             
                                                                         </td>
@@ -401,7 +401,6 @@
                                                                                         <a href="#" class="mb-0 text-sm" style="font-size: small; font-weight: 500; text-decoration: none; color: black;">00129876544522</a>
                                                                                     </td>
                                                                                     <td class="" style="vertical-align: middle;">
-                                                                                      
                                                                                         <button class="btn btn-danger btn-sm" style="border-radius: 10px;"><i class="bi bi-trash" style="color: white;"></i></button>
                                                 
                                                                                     </td>
@@ -593,6 +592,163 @@
             <div class="row">
                 <div class="col-lg-12">
                     <h4 class="pb-0 mb-0">Registrar producto</h4>
+                    <p class="pt-0 mt-0" style="font-size: small; color: gray">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                </div>
+            </div>
+          <div class="row">
+            <div class="col-lg-12 mt-4 mb-3" hidden>
+                <div class="form-floating">
+                    <select class="form-select floating_input" id="select_type" >
+                      <option value="0" selected>Selecciona un tipo</option>
+                      <option value="1">Producto</option>
+                      <option value="2">Servicio</option>
+                    </select>
+                    <label for="select_type" class="d-flex align-items-center" style="font-size: small; color: gray"><i class='bx bx-purchase-tag me-1' style="font-size: 18px;"></i>¿Qué deseas registrar?</label>
+                </div>
+            </div>
+            <div id="producto" class="col-lg-12 " >
+                <form action="">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="form-floating mb-3">
+                                <input type="text" class="form-control floating_input" id="floatingInput" style="" placeholder="Ingresa Nombre Producto">
+                                <label for="floatingInput" class="d-flex align-item-center" style="font-size: small; color: gray"><i class='bx bx-package me-1' style="font-size: 18px;"></i>Nombre del producto</label>
+                              </div>
+                        </div>
+                        <div class="col-lg-12 mb-3">
+                            <div class="form-floating">
+                                <input type="text" class="form-control floating_input" id="floatingPassword" placeholder="Ingresa Descripción">
+                                <label for="floatingPassword" class="d-flex align-items-center" style="font-size: small; color: gray"><i class="bi bi-justify-left me-1" style="font-size: 18px;"></i>Descripción</label>
+                              </div>
+                        </div>
+                        <div class="col-lg-6 mb-3">
+                            <div class="form-floating">
+                                <select class="form-select floating_input" id="floatingSelect" aria-label="Floating label select example">
+                                  <option value="0" selected>No aplica</option>
+                                  <option value="1">One</option>
+                                  <option value="2">Two</option>
+                                  <option value="3">Three</option>
+                                </select>
+                                <label for="floatingSelect" class="d-flex align-items-center" style="font-size: small; color: gray"><i class='bx bx-purchase-tag me-1' style="font-size: 18px;"></i>Categoría</label>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 mb-3">
+                            <div class="form-floating">
+                                <select class="form-select floating_input" id="floatingSelect" aria-label="Floating label select example">
+                                  <option value="0" selected>No aplica</option>
+                                  <option value="1">One</option>
+                                  <option value="2">Two</option>
+                                  <option value="3">Three</option>
+                                </select>
+                                <label for="floatingSelect" class="d-flex align-items-center" style="font-size: small; color: gray"><i class='bx bx-ruler me-1' style="font-size: 18px;"></i>Unidad de Medida</label>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 mb-3">
+                            <div class="form-floating">
+                                <input type="text" class="form-control floating_input" id="floatingPassword" placeholder="Escanea/Ingresa">
+                                <label for="floatingPassword" class="d-flex align-items-center" style="font-size: small; color: gray"><i class='bx bx-barcode-reader me-1' style="font-size: 18px;"></i>Código de barras</label>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 mb-3">
+                            <div class="form-floating">
+                                <input type="text" class="form-control floating_input" id="floatingPassword" placeholder="Ingresa Precio ">
+                                <label for="floatingPassword" class="d-flex align-items-center" style="font-size: small; color: gray"><i class='bx bx-dollar-circle me-1'  style="font-size: 18px;"></i>Precio de venta</label>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 mb-3">
+                            <div class="form-floating">
+                                <input type="text" class="form-control floating_input" id="floatingPassword" placeholder="Ingresa comentario (Opcional)">
+                                <label for="floatingPassword" class="d-flex align-items-center" style="font-size: small; color: gray"><i class='bx bx-message-square-dots me-1' style="font-size: 18px;"></i>Comentarios</label>
+                              </div>
+                        </div>
+                        <div class="col-lg-12">
+                            <div class="mb-3">
+                                <label for="formFile" class="form-label d-flex align-items-center" style="font-size: small; color: gray"><i class='bx bx-image-alt me-1' style="font-size: 18px;"></i>Imagen del producto</label>
+                                <input class="form-control" type="file" id="formFile" style="font-size: small;">
+                              </div>
+                        </div>
+                        <div class="col-lg-12 mt-3">
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <button class="btn btn-dark" style="width: 100%; border-radius: 15px;  height: 45px; font-size: 14px;" type="button">Guardar</button>
+                                </div>
+        
+                            </div>
+                           
+                         
+                        </div>
+                    </div>
+                    
+                      
+                </form>
+            </div>
+            <div id="servicio" class="col-lg-12 " hidden>
+                <form action="">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="form-floating mb-3">
+                                <input type="text" class="form-control floating_input" id="floatingInput" style="" placeholder="Ingresa Nombre Producto">
+                                <label for="floatingInput" class="d-flex align-item-center" style="font-size: small; color: gray"><i class='bx bx-injection me-1' style="font-size: 18px;"></i>Nombre del servicio</label>
+                              </div>
+                        </div>
+                        <div class="col-lg-12 mb-3">
+                            <div class="form-floating">
+                                <input type="text" class="form-control floating_input" id="floatingPassword" placeholder="Ingresa Descripción">
+                                <label for="floatingPassword" class="d-flex align-items-center" style="font-size: small; color: gray"><i class="bi bi-justify-left me-1" style="font-size: 18px;"></i>Descripción</label>
+                              </div>
+                        </div>
+                        <div class="col-lg-6 mb-3">
+                            <div class="form-floating">
+                                <select class="form-select floating_input" id="floatingSelect" aria-label="Floating label select example">
+                                  <option value="0" selected>No aplica</option>
+                                  <option value="1">One</option>
+                                  <option value="2">Two</option>
+                                  <option value="3">Three</option>
+                                </select>
+                                <label for="floatingSelect" class="d-flex align-items-center" style="font-size: small; color: gray"><i class='bx bx-purchase-tag me-1' style="font-size: 18px;"></i>Categoría</label>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 mb-3">
+                            <div class="form-floating">
+                                <input type="text" class="form-control floating_input" id="floatingPassword" placeholder="Ingresa Precio ">
+                                <label for="floatingPassword" class="d-flex align-items-center" style="font-size: small; color: gray"><i class='bx bx-dollar-circle me-1'  style="font-size: 18px;"></i>Costo</label>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 mt-3">
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <button class="btn btn-dark" style="width: 100%; border-radius: 15px;  height: 45px; font-size: 14px;" type="button">Guardar</button>
+                                </div>
+        
+                            </div>
+                           
+                         
+                        </div>
+                    </div>
+                    
+                      
+                </form>
+            </div>
+            
+          </div>
+        </div>
+       
+      </div>
+    </div>
+  </div>
+
+  <!--------- MODAL MODIFICAR PRODUCTO ---------->
+
+  <div class="modal faded" id="modificar_producto" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content border-0" style="border-radius: 15px;">
+        <div class="modal-header border-0 bg-transparent d-flex align-items-center pb-0 ">
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body pt-1 p-4 pb-4">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h4 class="pb-0 mb-0">Modificar producto</h4>
                     <p class="pt-0 mt-0" style="font-size: small; color: gray">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
                 </div>
             </div>
