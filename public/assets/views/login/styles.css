@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+
+body{
+    font-family: 'Poppins';
+    height: 100vh;
+  }
+
+#login{
+    height: 100vh !important;
+}
+
+.input-sform{
+    height: 45px;
+    border: 0.5px solid rgba(128, 128, 128, 0.24);
+    border-radius: 0px;
+}
+
+::placeholder{
+    color: rgba(128, 128, 128, 0.469) !important;
+    font-size: small !important;
+    }
+
+    #pills-admin-tab{
+        font-size: 18px;
+        font-weight: 400;
+        color: #18568678 !important;
+    }
+
+    #pills-admin-tab.active{
+        font-size: 18px;
+        font-weight: 600;
+        color: #185786 !important;
+    }
+
+    #pills-admin-tab:hover{
+        color: #2479ba !important;
+    }
+
+    #pills-operario-tab{
+        font-size: 18px;
+        font-weight: 400;
+        color: #18568678 !important;
+    }
+
+    #pills-operario-tab.active{
+        font-size: 18px;
+        font-weight: 600;
+        color: #185786 !important;
+    }
+
+    #pills-operario-tab:hover{
+        color: #2479ba !important;
+    }
+  

@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--------- CSS BOOTSTRAP ---------->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        <!--------- CSS PERSONALIZADOS ------->
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="../../libs/splide/dist/css/splide.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+        <title>Modulo Proveedores Administrador</title>
+    
+        <style>
+            
+        </style>
+        
+    </head>
+<body>
+    <div class="container-fluid">
+        <div class="row flex-nowrap">
+            <!--Sidebar-->
+            <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg-white">
+                <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 min-vh-100">
+                    <a href="#" class="mt-3 d-flex align-items-center pb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+                        <span style="color: gray; font-size: small;" class="d-none d-sm-inline">Herramientas</span>
+                    </a>
+                    <ul style="width: 100% !important;" class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start" id="menu">
+                        <li  class="clase_li pb-1 pt-1 nav-item">
+                            <a href="dashboard.html" class="modulos nav-link align-middle px-0">
+                                <i class="fs-4 bi-house"></i> <span class="ms-1 d-none d-sm-inline">Dashboard</span>
+                            </a>
+                        </li>
+                        <li class="clase_li pb-1 pt-1 nav-item">
+                            <a href="punto.html" class="modulos nav-link align-middle px-0">
+                                <i class="fs-4 bi-credit-card"></i> <span class="ms-1 d-none d-sm-inline">Punto de Venta</span>
+                            </a>
+                        </li>
+                        <li class="clase_li pb-1 pt-1 nav-item">
+                            <a href="pacientes.html" class="modulos nav-link align-middle px-0">
+                                <i class="fs-4 bi-person"></i> <span class="ms-1 d-none d-sm-inline">Pacientes</span>
+                            </a>
+                        </li>
+                        <li class="clase_li pb-1 pt-1 nav-item">
+                            <a  href="inventario.html" class="modulos nav-link align-middle px-0">
+                                <i class="fs-4 bi-clipboard2"></i> <span class="ms-1 d-none d-sm-inline">Inventario</span>
+                            </a>
+                        </li>
+                        <li class="clase_li pb-1 pt-1 nav-item">
+                            <a href="medicos.html" class="modulos nav-link align-middle px-0">
+                                <i class="fa-solid fa-user-doctor fa-lg"></i> <span class="ms-1 d-none d-sm-inline">Médicos</span>
+                            </a>
+                        </li>
+                        <li class="clase_li pb-1 pt-1 nav-item">
+                            <a href="proveedores.html" class="clase_a modulos nav-link align-middle px-0">
+                                <i class="bi bi-capsule"></i> <span class="ms-1 d-none d-sm-inline">Proveedores</span>
+                            </a>
+                        </li>
+                        <li class="clase_li pb-1 pt-1 nav-item">
+                            <a href="sucursales.html" class="modulos nav-link align-middle px-0">
+                                <i class="fs-4 bi-building"></i> <span class="ms-1 d-none d-sm-inline">Sucursales</span>
+                            </a>
+                        </li>
+                        <li class="clase_li pb-1 pt-1 nav-item">
+                            <a href="usuarios.html" class="modulos nav-link align-middle px-0">
+                                <i class="bi bi-people-fill"></i> <span class="ms-1 d-none d-sm-inline">Usuarios</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <hr>
+                </div>
+            </div>
+
+            <div class="col py-3" style="background-color: whitesmoke;" >
+                <section>
+                    <header>
+                        <nav  class="navbar navbar-expand-lg navbar-light bg-transparent pt-3 pb-3">
+                            <div class="container-fluid d-flex align-items-center">
+                              <div class="container p-0 m-0" style="width: auto !important;">
+                                <h2 class="mb-0 pb-0" style="font-weight: 600;">Proveedores</h2>
+                              <p class="pt-0 mt-0" style="font-size: small; color: gray">Módulo de Proveedores</p>
+                              </div>
+        
+                              <button class="navbar-toggler border-0 p-0" style="margin-top: -1rem;" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                                <i class='bx bx-menu' style="font-size: 30px;"></i>
+                              </button>
+                              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                                <ul class="navbar-nav ms-auto m-0">
+                                  <li class="nav-item m-0">
+                                    <!-- <a class="nav-link active pe-3 ps-3 m-0" style="color: white;background-color: #1C1F23; border-radius: 15px; font-size: small; margin-top: -0.1rem;" aria-current="page" href="#"> <i class="bi bi-box-arrow-in-right me-2"></i>Cerrar sesión</a> -->
+                                    <div class="dropdown pb-4 d-flex align-items-center" style="width: 100%; padding-left: 11px;">
+        
+                                        <a href="#" class="text-white text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false" style="width: 100% !important;" >
+                                            <img src="../../img/logo/logo_mini.png" alt="hugenerd" width="30" height="30" class="rounded-circle" style="border: 1px solid rgba(128, 128, 128, 0.542)">
+                                            <span class="d-sm-inline mx-2 text-black d-flex align-items-center">Revital Medic <i class="bi bi-caret-down-fill ms-2" style="vertical-align: middle;"></i></span>
+                                        </a>
+                                      
+                                        <ul class="dropdown-menu dropdown-menu-dark text-small shadow-sm border-0 m-0" style="border-radius: 20px; width: 100%; background-color: #1C1F23;" aria-labelledby="dropdownUser1">
+                                            <li><a class="dropdown-item pt-2 pb-2" href="#"><i class="bi bi-gear me-2"></i>Configuración</a></li>
+                                            <li><a class="dropdown-item pt-2 pb-2" href="#"><i class="bi bi-person-gear me-2"></i>Mi cuenta</a></li>
+                                            <li><a class="dropdown-item pt-2 pb-2" href="#"><i class="bi bi-box-arrow-in-right me-2"></i>Cerrar sesión</a></li>
+                                        </ul>
+                    
+                                    </div>
+                                  </li>
+                                  
+                                </ul>
+                              </div>
+                            </div>
+                        </nav>
+                    </header>
+
+                    <!--Contenido de la tabla de pacientes-->
+                    <div class="container-fluid">
+                        <div class="row" id="fila-cards">
+                            <!-- Columna de la tabla Tabla de pacientes-->
+                            <div class="col-12">
+                                <!--Tabla de los pacientes -->
+                                <div class="row text-center">
+                                    <div class="col-12">
+                                        <div class="card shadow-sm border-0" style="border-radius: 17px; height: 100%;">
+                                            <div class="card-body pt-0 mt-0">
+                                                <div class="row">
+                                                    <div class="row mt-4">
+                                                        <div class="text-start col-6">
+                                                            <h5 style="font-size: large; " class="pb-0 mb-0" >Lista de proveedores</h5>
+                                                            <p style="font-size: small; color: gray" class=" pt-0 mt-1" >Información de proveedores activos.</p>
+                                                        </div>
+                                                        <div class="d-flex justify-content-end col-6">
+                                                            <button data-bs-toggle="modal" data-bs-target="#nuevo_proveedor" data-bs-backdrop="false" class="btn btn-sm btn-dark pt-2 pb-2 ps-3 pe-3 me-2"  style="border-radius: 10px;  height: 45px;"><i class="bi bi-plus-circle me-1"></i> Agregar Proveedor</button>
+                                                            <button style="height: 45px; color: white; border-radius: 10px; background-color: green; border-color: green;" class="btn btn-sm btn-success pt-2 pb-2 ps-3 pe-3 me-2">
+                                                                <i style="font-size: 18px;" class="bi-file-earmark-excel text-white"></i>
+                                                            </button>
+                                                            <button style="height: 45px; color: white; border-radius: 10px; background-color: red; border-color: red;" class="btn btn-sm btn-success pt-2 pb-2 ps-3 pe-3 me-2">
+                                                                <i style="font-size: 18px;" class="bi-filetype-pdf"></i>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="row mt-2 mb-2">
+                                                        <div class="col-4">
+                                                            <input type="text" style="border: 0.5px solid rgba(139, 138, 138, 0.301); font-size: small; height: 45px; border-radius: 10px; width: 100%;" class="form-control" placeholder="Buscar">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12">
+                                                        <div class="table-responsive">
+                                                            <table class="table mt-2 table-borderless">
+                                                                <thead style="background-color: rgb(250, 249, 249);" class="bg-gray" >
+                                                                
+                                                                    <th scope="col" style="text-align: left; color: gray; font-size: small; font-weight: 500;">Nombre</th>
+                                                                    <th scope="col" style="text-align: left; color: gray; font-size: small; font-weight: 500;">RFC</th>
+                                                                    <th scope="col" style="text-align: left; color: gray; font-size: small; font-weight: 500;">Dirección</th>
+                                                                    <th scope="col" style="text-align: left; color: gray; font-size: small; font-weight: 500;">Categoria</th>
+                                                                    <th scope="col" style="text-align: left; color: gray; font-size: small; font-weight: 500;">Teléfono</th>
+                                                                    <th scope="col" style="text-align: left; color: gray; font-size: small; font-weight: 500;">Correo Electrónico</th>
+                                                                    <th scope="col" style="text-align: left; color: gray; font-size: small; font-weight: 500;">Fecha de Registro</th>
+                                                                    <th scope="col" style="text-align: left; color: gray; font-size: small; font-weight: 500;">Acciones</th>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr style="border-bottom: 0.4px solid rgba(128, 128, 128, 0.247);"  class="">
+                                                                        <td style="vertical-align: middle;">Sputnik</td>
+                                                                        <td style="vertical-align: middle;" >ABC 680524 P-76</td>
+                                                                        <td style="vertical-align: middle;">Las Piedras # 20 Ciudad Hidalgo</td>
+                                                                        <td style="vertical-align: middle;">Vacunas</td>
+                                                                        <td style="vertical-align: middle;">4471103453</td>
+                                                                        <td style="vertical-align: middle;">sputnik@gmail.com</td>
+                                                                        <td style="vertical-align: middle;">29-01-2023</td>
+                                                                        <td class="d-flex" style="vertical-align: middle;">
+                                                                            <button data-bs-toggle="modal" data-bs-target="#modificar_proveedor" data-bs-backdrop="false" style="border-radius: 8px;" class="btn btn-warning btn-sm "><i class="bi-pencil text-white"></i></button>
+                                                                            <button style="border-radius: 8px;" class="btn btn-danger btn-sm ms-2 "><i class="bi-x-circle text-white"></i></button>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+
+                                                        </div>
+                                                    </div>
+
+                                                    
+                                                    <div class="row ms-1">
+                                                        <!--Contador de elementos-->
+                                                        <div class=" d-flex col-6 justify-content-start">
+                                                            <label class="ms-2 mt-4" style="color: rgb(114, 114, 114);" for="total">Total: <label class="fw-bold" style="color: rgb(114, 114, 114); " for="numeracion">3</label></label>
+                                                        </div>
+                                                        <!--Paginador-->
+                                                        <div  class=" col-6">
+                                                            <ul class="pagination justify-content-end mt-3">
+                                                                <li  class="page-item">
+                                                                    <a style="color: gray;" class="sinborde_pag ps-3 pe-3 ms-1 me-1 page-link" href="#" aria-label="Previous">
+                                                                        <i class="bi bi-arrow-left-short"></i>
+                                                                    </a>
+                                                                </li>
+                                                                <li  class="active page-item " ><a style="color: gray;" class="sinborde_pag  ps-3 pe-3 ms-1 me-1 page-link " href="#">1</a></li>
+                                                                <li  class="page-item"><a style="color: gray;" class="sinborde_pag ps-3 pe-3 ms-1 me-1 page-link" href="#">2</a></li>
+                                                                <li class="page-item"><a style="color: gray;" class="sinborde_pag  ps-3 pe-3 ms-1 me-1 page-link" href="#">3</a></li>
+                                                                <li class="page-item">
+                                                                    <a style="color: gray;" class="sinborde_pag ps-3 pe-3 ms-1 me-1 page-link" href="#" aria-label="Next">
+                                                                        <i class="bi bi-arrow-right-short"></i>
+                                                                    </a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                                
+
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    
+                                        
+                                        
+                                                                                    
+                                    
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal proveedores registrar -->
+    <div class="modal faded" id="nuevo_proveedor" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content border-0" style="border-radius: 15px;">
+            <div class="modal-header border-0 bg-transparent d-flex align-items-center pb-0 ">
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body pt-1 p-4 pb-4">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h4 class="pb-0 mb-0">Registrar Proveedor</h4>
+                        <p class="pt-0 mt-0" style="font-size: small; color: gray">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    </div>
+                </div>
+              <div class="row">
+                <div id="producto" class="col-lg-12 " >
+                    <form action="">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="form-floating mb-3">
+                                    <input type="text" class="form-control floating_input" id="floatingInput" style="" placeholder="Ingresa Nombre Medico">
+                                    <label for="floatingInput" class="d-flex align-item-center" style="font-size: small; color: gray"><i class='bx bx-package me-1' style="font-size: 18px;"></i>Nombre de proveedor</label>
+                                  </div>
+                            </div>
+                            <div class="col-lg-6 mb-3">
+                                <div class="form-floating">
+                                    <select class="form-select floating_input" id="floatingSelect" aria-label="Floating label select example">
+                                      <option value="0" selected>No aplica</option>
+                                      <option value="1">Vacunas</option>
+                                      <option value="2">Pastillas</option>
+                                      <option value="3">Otro</option>
+                                    </select>
+                                    <label for="floatingSelect" class="d-flex align-items-center" style="font-size: small; color: gray"><i class='bx bx-purchase-tag me-1' style="font-size: 18px;"></i>Categoria</label>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 mb-3">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control floating_input" id="floatingPassword" placeholder="RFC">
+                                    <label for="floatingPassword" class="d-flex align-items-center" style="font-size: small; color: gray"><i class='bx bx-barcode-reader me-1' style="font-size: 18px;"></i>RFC</label>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 mb-3">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control floating_input" id="floatingPassword" placeholder="Telefono">
+                                    <label for="floatingPassword" class="d-flex align-items-center" style="font-size: small; color: gray"><i class='bx bx-barcode-reader me-1' style="font-size: 18px;"></i>Telefono</label>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 mb-3">
+                                <div class="form-floating">
+                                    <input type="date" class="form-control floating_input" id="floatingPassword" placeholder="Ingresa fecha registro ">
+                                    <label for="floatingPassword" class="d-flex align-items-center" style="font-size: small; color: gray"><i class='bx bx-dollar-circle me-1'  style="font-size: 18px;"></i>Fecha de registro</label>
+                                </div>
+                            </div>
+                            <div class="col-lg-12 mb-3">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control floating_input" id="floatingPassword" placeholder="Ingresa Dirección">
+                                    <label for="floatingPassword" class="d-flex align-items-center" style="font-size: small; color: gray"><i class='bx bx-message-square-dots me-1' style="font-size: 18px;"></i>Dirección</label>
+                                  </div>
+                            </div>
+                            <div class="col-lg-12 mb-3">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control floating_input" id="floatingPassword" placeholder="Ingresa correo electronico">
+                                    <label for="floatingPassword" class="d-flex align-items-center" style="font-size: small; color: gray"><i class='bx bx-message-square-dots me-1' style="font-size: 18px;"></i>Correo Electrónico</label>
+                                  </div>
+                            </div>
+                            <div class="col-lg-12 mt-3">
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <button class="btn btn-dark" style="width: 100%; border-radius: 15px;  height: 45px; font-size: 14px;" type="button">Guardar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                          
+                    </form>
+                </div>
+                <div id="servicio" class="col-lg-12 " hidden>
+                    <form action="">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="form-floating mb-3">
+                                    <input type="text" class="form-control floating_input" id="floatingInput" style="" placeholder="Ingresa Nombre Producto">
+                                    <label for="floatingInput" class="d-flex align-item-center" style="font-size: small; color: gray"><i class='bx bx-injection me-1' style="font-size: 18px;"></i>Nombre del servicio</label>
+                                  </div>
+                            </div>
+                            <div class="col-lg-12 mb-3">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control floating_input" id="floatingPassword" placeholder="Ingresa Descripción">
+                                    <label for="floatingPassword" class="d-flex align-items-center" style="font-size: small; color: gray"><i class="bi bi-justify-left me-1" style="font-size: 18px;"></i>Descripción</label>
+                                  </div>
+                            </div>
+                            <div class="col-lg-6 mb-3">
+                                <div class="form-floating">
+                                    <select class="form-select floating_input" id="floatingSelect" aria-label="Floating label select example">
+                                      <option value="0" selected>No aplica</option>
+                                      <option value="1">One</option>
+                                      <option value="2">Two</option>
+                                      <option value="3">Three</option>
+                                    </select>
+                                    <label for="floatingSelect" class="d-flex align-items-center" style="font-size: small; color: gray"><i class='bx bx-purchase-tag me-1' style="font-size: 18px;"></i>Categoría</label>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 mb-3">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control floating_input" id="floatingPassword" placeholder="Ingresa Precio ">
+                                    <label for="floatingPassword" class="d-flex align-items-center" style="font-size: small; color: gray"><i class='bx bx-dollar-circle me-1'  style="font-size: 18px;"></i>Costo</label>
+                                </div>
+                            </div>
+                            <div class="col-lg-12 mt-3">
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <button class="btn btn-dark" style="width: 100%; border-radius: 15px;  height: 45px; font-size: 14px;" type="button">Guardar</button>
+                                    </div>
+            
+                                </div>
+                               
+                             
+                            </div>
+                        </div>
+                        
+                          
+                    </form>
+                </div>
+                
+              </div>
+            </div>
+           
+          </div>
+        </div>
+    </div>
+    <!--dfsjgfjfgspo-->
+
+    <!-- Modal proveedores modificar -->
+    <div class="modal faded" id="modificar_proveedor" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content border-0" style="border-radius: 15px;">
+            <div class="modal-header border-0 bg-transparent d-flex align-items-center pb-0 ">
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body pt-1 p-4 pb-4">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h4 class="pb-0 mb-0">Modificar Proveedor</h4>
+                        <p class="pt-0 mt-0" style="font-size: small; color: gray">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    </div>
+                </div>
+              <div class="row">
+                <div id="producto" class="col-lg-12 " >
+                    <form action="">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="form-floating mb-3">
+                                    <input type="text" class="form-control floating_input" id="floatingInput" style="" placeholder="Ingresa Nombre Medico">
+                                    <label for="floatingInput" class="d-flex align-item-center" style="font-size: small; color: gray"><i class='bx bx-package me-1' style="font-size: 18px;"></i>Nombre de proveedor</label>
+                                  </div>
+                            </div>
+                            <div class="col-lg-6 mb-3">
+                                <div class="form-floating">
+                                    <select class="form-select floating_input" id="floatingSelect" aria-label="Floating label select example">
+                                      <option value="0" selected>No aplica</option>
+                                      <option value="1">Vacunas</option>
+                                      <option value="2">Pastillas</option>
+                                      <option value="3">Otro</option>
+                                    </select>
+                                    <label for="floatingSelect" class="d-flex align-items-center" style="font-size: small; color: gray"><i class='bx bx-purchase-tag me-1' style="font-size: 18px;"></i>Categoria</label>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 mb-3">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control floating_input" id="floatingPassword" placeholder="RFC">
+                                    <label for="floatingPassword" class="d-flex align-items-center" style="font-size: small; color: gray"><i class='bx bx-barcode-reader me-1' style="font-size: 18px;"></i>RFC</label>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 mb-3">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control floating_input" id="floatingPassword" placeholder="Telefono">
+                                    <label for="floatingPassword" class="d-flex align-items-center" style="font-size: small; color: gray"><i class='bx bx-barcode-reader me-1' style="font-size: 18px;"></i>Telefono</label>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 mb-3">
+                                <div class="form-floating">
+                                    <input type="date" class="form-control floating_input" id="floatingPassword" placeholder="Ingresa fecha registro ">
+                                    <label for="floatingPassword" class="d-flex align-items-center" style="font-size: small; color: gray"><i class='bx bx-dollar-circle me-1'  style="font-size: 18px;"></i>Fecha de registro</label>
+                                </div>
+                            </div>
+                            <div class="col-lg-12 mb-3">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control floating_input" id="floatingPassword" placeholder="Ingresa Dirección">
+                                    <label for="floatingPassword" class="d-flex align-items-center" style="font-size: small; color: gray"><i class='bx bx-message-square-dots me-1' style="font-size: 18px;"></i>Dirección</label>
+                                  </div>
+                            </div>
+                            <div class="col-lg-12 mb-3">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control floating_input" id="floatingPassword" placeholder="Ingresa correo electronico">
+                                    <label for="floatingPassword" class="d-flex align-items-center" style="font-size: small; color: gray"><i class='bx bx-message-square-dots me-1' style="font-size: 18px;"></i>Correo Electrónico</label>
+                                  </div>
+                            </div>
+                            <div class="col-lg-12 mt-3">
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <button class="btn btn-dark" style="width: 100%; border-radius: 15px;  height: 45px; font-size: 14px;" type="button">Guardar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                          
+                    </form>
+                </div>
+                <div id="servicio" class="col-lg-12 " hidden>
+                    <form action="">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="form-floating mb-3">
+                                    <input type="text" class="form-control floating_input" id="floatingInput" style="" placeholder="Ingresa Nombre Producto">
+                                    <label for="floatingInput" class="d-flex align-item-center" style="font-size: small; color: gray"><i class='bx bx-injection me-1' style="font-size: 18px;"></i>Nombre del servicio</label>
+                                  </div>
+                            </div>
+                            <div class="col-lg-12 mb-3">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control floating_input" id="floatingPassword" placeholder="Ingresa Descripción">
+                                    <label for="floatingPassword" class="d-flex align-items-center" style="font-size: small; color: gray"><i class="bi bi-justify-left me-1" style="font-size: 18px;"></i>Descripción</label>
+                                  </div>
+                            </div>
+                            <div class="col-lg-6 mb-3">
+                                <div class="form-floating">
+                                    <select class="form-select floating_input" id="floatingSelect" aria-label="Floating label select example">
+                                      <option value="0" selected>No aplica</option>
+                                      <option value="1">One</option>
+                                      <option value="2">Two</option>
+                                      <option value="3">Three</option>
+                                    </select>
+                                    <label for="floatingSelect" class="d-flex align-items-center" style="font-size: small; color: gray"><i class='bx bx-purchase-tag me-1' style="font-size: 18px;"></i>Categoría</label>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 mb-3">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control floating_input" id="floatingPassword" placeholder="Ingresa Precio ">
+                                    <label for="floatingPassword" class="d-flex align-items-center" style="font-size: small; color: gray"><i class='bx bx-dollar-circle me-1'  style="font-size: 18px;"></i>Costo</label>
+                                </div>
+                            </div>
+                            <div class="col-lg-12 mt-3">
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <button class="btn btn-dark" style="width: 100%; border-radius: 15px;  height: 45px; font-size: 14px;" type="button">Guardar</button>
+                                    </div>
+            
+                                </div>
+                               
+                             
+                            </div>
+                        </div>
+                        
+                          
+                    </form>
+                </div>
+                
+              </div>
+            </div>
+           
+          </div>
+        </div>
+    </div>
+    <!--dfsjgfjfgspo-->
+
+    
+
+    <script src="https://kit.fontawesome.com/542478b4b6.js " crossorigin="anonymous "></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script> 
+
+</body>
+
+
+</html>
